@@ -22,28 +22,28 @@ $primaryMode = Tools::valueAt(explode('_', $BF->in('mode')), 0);
 
 ?>
         <li class="<?=Tools::conditional('browse', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=browse" style="background-image: url(/acp/static/icon/magnifier.png);">Browse</a>
+          <a href="./?act=inventory&mode=browse" style="background-image: url(./static/icon/magnifier.png);">Browse</a>
         </li>
         <li class="<?=Tools::conditional('add', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=add" style="background-image: url(/acp/static/icon/plus-circle.png);">Add</a>
+          <a href="./?act=inventory&mode=add" style="background-image: url(./static/icon/plus-circle.png);">Add</a>
         </li>
         <li class="<?=Tools::conditional('organise', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=organise" style="background-image: url(/acp/static/icon/folder-open.png);">Categories</a>
+          <a href="./?act=inventory&mode=organise" style="background-image: url(./static/icon/folder-open.png);">Categories</a>
         </li>
         <li class="<?=Tools::conditional('classifications', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=classifications" style="background-image: url(/acp/static/icon/zones.png);">Classifications</a>
+          <a href="./?act=inventory&mode=classifications" style="background-image: url(./static/icon/zones.png);">Classifications</a>
         </li>
         <li class="<?=Tools::conditional('tags', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=tags" style="background-image: url(/acp/static/icon/tags.png);">Item Tags</a>
+          <a href="./?act=inventory&mode=tags" style="background-image: url(./static/icon/tags.png);">Item Tags</a>
         </li>
         <li class="<?=Tools::conditional('brands', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=brands" style="background-image: url(/acp/static/icon/reg-trademark.png);">Brands</a>
+          <a href="./?act=inventory&mode=brands" style="background-image: url(./static/icon/reg-trademark.png);">Brands</a>
         </li>
         <li class="<?=Tools::conditional('outlets', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=outlets" style="background-image: url(/acp/static/icon/store.png);">Outlets</a>
+          <a href="./?act=inventory&mode=outlets" style="background-image: url(./static/icon/store.png);">Outlets</a>
         </li>
         <li class="<?=Tools::conditional('arrivals', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=arrivals" style="background-image: url(/acp/static/icon/wooden-box-label.png);">Back In Stock</a>
+          <a href="./?act=inventory&mode=arrivals" style="background-image: url(./static/icon/wooden-box-label.png);">Back In Stock</a>
           
 <?php
 
@@ -66,7 +66,7 @@ $primaryMode = Tools::valueAt(explode('_', $BF->in('mode')), 0);
           
         </li>
         <li class="<?=Tools::conditional('requests', $primaryMode, 'selected')?>">
-          <a href="./?act=inventory&mode=requests" style="background-image: url(/acp/static/icon/flag.png);">Requests</a>
+          <a href="./?act=inventory&mode=requests" style="background-image: url(./static/icon/flag.png);">Requests</a>
           
 <?php
 

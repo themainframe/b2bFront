@@ -285,7 +285,7 @@ var droppableArgs = {
            .animate({color: "#000000"}, 500);
     
     // Update DB
-    $.post('/acp/ajax/editable.ajax.php',
+    $.post('ajax/editable.ajax.php',
            {
              'value' : $(ui.draggable).text(),
              'table' : $(this).attr('table'),
@@ -452,7 +452,7 @@ function setUpUIControls()
         .autocomplete({
         		  source: function(request, response) {
                   $.ajax({
-                      url: "/acp/ajax/autocomplete_classification_value.ajax.php",
+                      url: "ajax/autocomplete_classification_value.ajax.php",
                       dataType: "json",
                       data: {
                           term: request.term,
@@ -519,7 +519,7 @@ function finishEditing() {
   var id = $(this).attr('id');
                 
   // Make a request to update the table as specified
-  $.post('/acp/ajax/editable.ajax.php',
+  $.post('ajax/editable.ajax.php',
          {
            'value' : $(this).val(),
            'table' : $(this).attr('table'),
@@ -559,7 +559,7 @@ function checkForNotifications()
   // Enabled?
 
     // Read each notification
-    $.getJSON('/acp/ajax/notifications.ajax.php',
+    $.getJSON('ajax/notifications.ajax.php',
     {'notifications' : ('enableNotifications' ? 'true' : 'false')},
     function(data) {
  
@@ -778,7 +778,7 @@ function checkForNotifications()
         }
                   
         imgOnline = $('<img />')
-                    .attr('src', '/acp/static/icon/status.png')
+                    .attr('src', 'static/icon/status.png')
                     .css('vertical-align', 'middle')
                     .attr('title', 'Staff member using ACP.');
                     
@@ -786,7 +786,7 @@ function checkForNotifications()
         {
           // Show "Live Chat" too
           imgLiveIM = $('<img />')
-                      .attr('src', '/acp/static/icon/balloon.png')
+                      .attr('src', 'static/icon/balloon.png')
                       .css('vertical-align', 'middle')
                       .attr('title', 'Staff member online for IM Chat.');
         }
@@ -841,7 +841,7 @@ function checkForNotifications()
 function switchOnlineOffline()
 {
   // Change mode
-  $.getJSON('/acp/ajax/chat_status.ajax.php',
+  $.getJSON('ajax/chat_status.ajax.php',
     {'status' : (online ? '0' : '1')},
     function(data) {
     
@@ -1157,7 +1157,7 @@ function chatMessage(id, content, userID, time, read, meta, direction)
  */
 function sendMessage(content, userID)
 {
-  $.getJSON('/acp/ajax/chat.ajax.php', {'content' : content, 'userID' : userID},
+  $.getJSON('ajax/chat.ajax.php', {'content' : content, 'userID' : userID},
     function(data) {
       seenMessages.push(data.id.toString());
     });
@@ -1268,7 +1268,7 @@ function notify(title, message, iconURL, persist, callback)
   $('#notifications').jnotifyAddMessage({
                       text: '<strong>' + title + '</strong><br /><p>' + message + '</p>',
                       permanent: persist,
-                      icon: '/acp/static/icon/' + iconURL,
+                      icon: 'static/icon/' + iconURL,
                       click: callback
                     });
       
@@ -1284,7 +1284,7 @@ function setIcon()
   var link = document.createElement('link');
   link.type = 'image/gif';
   link.rel = 'shortcut icon';
-  link.href = '/acp/static/image/aui-activity.gif';
+  link.href = 'static/image/aui-activity.gif';
   document.getElementsByTagName('head')[0].appendChild(link);
   
   // Change the icon back soon
@@ -1319,7 +1319,7 @@ function loadingScreen()
 
   // Show unclosable dialog
   $('#page-transition-loader').html('<p style="padding: 23px 0px 0px 20px;"><span class="ui-icon" style="background-image: ' + 
-                                    'url(/acp/static/image/aui-loader.gif); float:left; margin:0 17px 20px 0;"></span>' + 
+                                    'url(static/image/aui-loader.gif); float:left; margin:0 17px 20px 0;"></span>' + 
                                     'Please Wait...</p>')
                               .dialog({
     modal: true,
@@ -1453,7 +1453,7 @@ function flb_addValue(name)
   // Add the row to the table
   $('#flb_' + name + '_rows').append('<tr><td><a rel="' + name + '_' + value + 
                                      '" class="tool flb_remove" title="Remove">' + 
-                                     '&nbsp; <img src="/acp/static/icon/cross-circle.png" alt="Remove" /> Remove</a>&nbsp;' + 
+                                     '&nbsp; <img src="static/icon/cross-circle.png" alt="Remove" /> Remove</a>&nbsp;' + 
                                      value + '</td></tr>');
   
   // Add to the <textarea />
@@ -1474,7 +1474,7 @@ function flb_addValue(name)
 function downloadDTab(DTabName, outputType)
 {
   // Make the request
-  $.get('/acp/ajax/dtab_download.ajax.php', {'dtab': DTabName.replace('.dtab', ''), 'type' : outputType}, 
+  $.get('ajax/dtab_download.ajax.php', {'dtab': DTabName.replace('.dtab', ''), 'type' : outputType}, 
     function(data) {
       // Finished
     });
@@ -1564,7 +1564,7 @@ function itemSelectorModified(showOnlySelection)
 {
   // Set fancy loader background
   $('#item-selector-contents')
-    .css('background', 'url(/acp/static/image/aui-loader.gif) no-repeat center center');
+    .css('background', 'url(./static/image/aui-loader.gif) no-repeat center center');
   $('#item-selector-contents table').hide();
   
   // Update count
@@ -1574,7 +1574,7 @@ function itemSelectorModified(showOnlySelection)
   );
   
   // AJAX request
-  $.getJSON('/acp/ajax/select_items.ajax.php',
+  $.getJSON('./ajax/select_items.ajax.php',
     { 'term' : ($('#item-selector-term').val() == $('#item-selector-term').attr('hint') ?
         '' : $('#item-selector-term').val()),
       'category' : $('#item-selector-category').val(),

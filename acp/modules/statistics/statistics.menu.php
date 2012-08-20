@@ -22,21 +22,21 @@ $primaryMode = Tools::valueAt(explode('_', $BF->in('mode')), 0);
 
 ?>
         <li class="<?=Tools::conditional('live', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=live" style="background-image: url(/acp/static/icon/application-monitor.png);">Current</a>
+          <a href="./?act=statistics&mode=live" style="background-image: url(./static/icon/application-monitor.png);">Current</a>
         </li>
         <li class="<?=Tools::conditional('overview', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=overview" style="background-image: url(/acp/static/icon/clock-select.png);">Overview</a>
+          <a href="./?act=statistics&mode=overview" style="background-image: url(./static/icon/clock-select.png);">Overview</a>
         </li>
         <li class="<?=Tools::conditional('custom', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=custom" style="background-image: url(/acp/static/icon/counter.png);">Custom</a>
+          <a href="./?act=statistics&mode=custom" style="background-image: url(./static/icon/counter.png);">Custom</a>
         </li> 
         <li class="<?=Tools::conditional('visual', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=visual" style="background-image: url(/acp/static/icon/color.png);">Visualisations</a>
+          <a href="./?act=statistics&mode=visual" style="background-image: url(./static/icon/color.png);">Visualisations</a>
         </li><!--
        
         <li class="<?=Tools::conditional('reports', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=reports" style="background-image: url(/acp/static/icon/reports.png);">Generate Reports</a>
+          <a href="./?act=statistics&mode=reports" style="background-image: url(./static/icon/reports.png);">Generate Reports</a>
         </li>
         <li class="<?=Tools::conditional('targets', $primaryMode, 'selected')?>">
-          <a href="./?act=statistics&mode=targets" style="background-image: url(/acp/static/icon/target.png);">Targets</a>
+          <a href="./?act=statistics&mode=targets" style="background-image: url(./static/icon/target.png);">Targets</a>
         </li>-->

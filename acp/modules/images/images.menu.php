@@ -22,14 +22,14 @@ $primaryMode = Tools::valueAt(explode('_', $BF->in('mode')), 0);
 
 ?>
         <li class="<?=Tools::conditional('browse', $primaryMode, 'selected')?>">
-          <a href="./?act=images&mode=browse" style="background-image: url(/acp/static/icon/magnifier.png);">Browse</a>
+          <a href="./?act=images&mode=browse" style="background-image: url(./static/icon/magnifier.png);">Browse</a>
         </li>
         <li class="<?=Tools::conditional('upload', $primaryMode, 'selected')?>">
-          <a href="./?act=images&mode=upload" style="background-image: url(/acp/static/icon/image-import.png);">Upload</a>
+          <a href="./?act=images&mode=upload" style="background-image: url(./static/icon/image-import.png);">Upload</a>
         </li>
         <li class="<?=Tools::conditional('unused', $primaryMode, 'selected')?>">
-          <a href="./?act=images&mode=unused" style="background-image: url(/acp/static/icon/image--exclamation.png);">Unused</a>
+          <a href="./?act=images&mode=unused" style="background-image: url(./static/icon/image--exclamation.png);">Unused</a>
         </li>
         <li class="<?=Tools::conditional('download', $primaryMode, 'selected')?>">
-          <a href="./?act=images&mode=download" style="background-image: url(/acp/static/icon/navigation-270-grn.png);">Download All</a>
+          <a href="./?act=images&mode=download" style="background-image: url(./static/icon/navigation-270-grn.png);">Download All</a>
         </li>

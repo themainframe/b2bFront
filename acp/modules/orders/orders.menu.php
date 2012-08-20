@@ -26,7 +26,7 @@ if($BF->admin->can('orders'))
   
   ?>
           <li class="<?=Tools::conditional('unprocessed', $primaryMode, 'selected')?>">
-            <a href="./?act=orders&mode=unprocessed" style="background-image: url(/acp/static/icon/inbox--exclamation.png);">Unprocessed</a>
+            <a href="./?act=orders&mode=unprocessed" style="background-image: url(./static/icon/inbox--exclamation.png);">Unprocessed</a>
             
   <?php
   
@@ -43,10 +43,10 @@ if($BF->admin->can('orders'))
             
           </li>
           <li class="<?=Tools::conditional('processed', $primaryMode, 'selected')?>">
-            <a href="./?act=orders&mode=processed" style="background-image: url(/acp/static/icon/inbox.png);">Processed</a>
+            <a href="./?act=orders&mode=processed" style="background-image: url(./static/icon/inbox.png);">Processed</a>
           </li>
           <li class="<?=Tools::conditional('held', $primaryMode, 'selected')?>">
-            <a href="./?act=orders&mode=held" style="background-image: url(/acp/static/icon/exclamation-octagon.png);">Held</a>
+            <a href="./?act=orders&mode=held" style="background-image: url(./static/icon/exclamation-octagon.png);">Held</a>
             
   <?php
   
