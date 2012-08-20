@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<plugin>
+  <title>Google Charts - Classification Blocks</title>
+  <description>Shows sales (currency or unit quantity) versus classification in a block-style view.</description>
+  <author>Damien Walsh / TranscendSolutions UK</author>
+  <url>http://www.transcendsolutions.net/</url>
+  <version>1.0</version>
+  <icon>icon.png</icon>
+</plugin>

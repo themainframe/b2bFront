@@ -1,0 +1,10 @@
+@import "ui.base.css";
+@import "ui.theme.css";
+
+
+#ui-datepicker-div { display: none; }
+
+a.menu_a {
+  background-repeat: none;
+  background-position: 2px 2px;
+}

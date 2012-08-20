@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<plugin>
+  <title>Google Charts - Category Blocks</title>
+  <description>Shows sales (currency or unit quantity) versus category in a block-style view.</description>
+  <author>Damien Walsh / TranscendSolutions UK</author>
+  <url>http://www.transcendsolutions.net/</url>
+  <version>1.0</version>
+  <icon>icon.png</icon>
+</plugin>

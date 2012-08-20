@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<skin>
+  <title>Default</title>
+  <description>Default Mail Template</description>
+  <author>Damien Walsh / TranscendSolutions UK</author>
+  <url>http://www.transcendsolutions.net/</url>
+  <version>1.0</version>
+  <content>content.html</content>
+</skin>

@@ -1,0 +1,48 @@
+A.selected { background: #a2a2a2; padding-left:3px !important; color:#fff !important; font-weight: bold; }
+A.dir_link { width:90%; }
+
+UL.jqueryFileTree {
+	font-family: Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+UL.jqueryFileTree LI {
+	list-style: none;
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0px;
+	white-space: nowrap;
+
+}
+
+UL.jqueryFileTree A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 0px 2px;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   user-select: none;
+border:0;
+outline: none;
+
+}
+
+UL.jqueryFileTree A:hover {
+	font-weight:bold;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   user-select: none;
+outline: none;
+}
+
+
+/* Core Styles */
+.jqueryFileTree LI.directory { background: url(/acp/static/icon/folder.png) left top no-repeat; }
+.jqueryFileTree LI.expanded { background: url(/acp/static/icon/folder-open.png) left top no-repeat; }
+.jqueryFileTree LI.subcategory { background: url(/acp/static/icon/folder-medium.png) left top no-repeat; }
+.jqueryFileTree LI.magnifier { background: url(/acp/static/icon/magnifier-small.png) left top no-repeat; }

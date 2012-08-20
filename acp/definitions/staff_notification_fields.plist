@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>new_order</key>
+	<string>A new order is submitted.</string>
+	<key>note_added</key>
+	<string>A new note is attached to an order.</string>
+	<key>request_for_account</key>
+	<string>A user requests a dealer account.</string>
+	<key>new_question</key>
+	<string>A new question is submitted.</string>
+	<key>target_met</key>
+	<string>A statistics target is hit.</string>
+	<key>target_missed</key>
+	<string>A statistics target is missed.</string>
+	<key>system_event</key>
+	<string>An internal system event happens.</string>
+	<key>new_data_jobs</key>
+	<string>A new data job is created.</string>
+</dict>
+</plist>

@@ -1,0 +1,476 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Helvetica, sans-serif;
+  font-size: 11px;
+  height: 100%;
+}
+
+/**
+ * Chat layout
+ */
+textarea.inputArea {
+  width: 563px;
+  height: 60px;
+  resize: none;
+}
+
+div.cmessage {
+  border-bottom: 1px solid #efefef;
+  padding: 6px;
+  font-size: 9pt;
+  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom;
+  background-origin: border-box;
+  background-clip: padding-box;
+}
+
+div.cmessage div.time {
+  float: right;
+  color: #afafaf;
+}
+
+div.cmessage div.img {
+  height: 32px;
+  background: url(/share/image/ui-company-icon.png) no-repeat;
+  border-radius: 4px;
+  padding-left: 40px;
+  float: left;
+  margin-right: 10px;
+}
+
+div.otheruser {
+  font-weight: bold;
+}
+
+div.otheruser div.img {
+  background: url(/share/image/ui-user.png) no-repeat !important;
+}
+
+div.cmessage div.contents {
+  float: left;
+}
+
+div.d-alert {
+  background: url(/acp/static/image/aui-alert-background.png) repeat-x !important;
+  color: #fff;
+}
+
+div.meta {
+  text-align: center;
+  padding-top: 10px !important;
+  background: none !important;
+}
+
+div.dealer {
+  border-bottom: 1px solid #efefef;
+  padding: 8px;
+  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom;
+  background-origin: border-box;
+  background-clip: padding-box;
+  border-bottom: 1px solid #afafaf;
+}
+
+div.mystatus {
+  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom !important;
+  background-origin: border-box  !important;
+  background-clip: padding-box  !important;
+  cursor: pointer;
+}
+
+#dealers-list div.selected {
+  background-image: url(/acp/static/icon/phone-start.png); 
+  background-repeat: no-repeat;
+  background-position: 174px 9px;
+}
+
+div.dealer:hover {
+  background-position-y: 16px;
+}
+
+div.d-status {
+  font-weight: bold;
+  float: left;
+  padding-left: 20px;
+  font-size: 9px;
+  height: 16px;
+  line-height: 16px;
+  background-repeat: no-repeat;
+  background-image: url(/acp/static/icon/status-offline.png);
+}
+
+div.d-online {
+  background-image: url(/acp/static/icon/status.png);
+}
+
+div.d-busy {
+  background-image: url(/acp/static/icon/tick-red.png) !important;
+}
+
+div.dealer div.buttons div.call {
+  width: 16px;
+  height: 16px;
+  background: url(/acp/static/icon/phone-start.png);
+  cursor: pointer;
+}
+
+div.taken {
+  color: #7d7d7d;
+  background: url(/acp/static/image/aui-menu-back.png) repeat-x !important;
+}
+
+div.d-overlay {
+  display: none;
+  float: right;
+  width: 570px;
+  text-align: center;
+}
+
+
+
+/**
+ * Main Layout
+ */
+
+div.quick_search {
+  position: relative;
+  left: 120px;
+  top: 3px;
+  float: left;
+  width: 200px;
+}
+
+div.quick_search_box {
+  width: 200px;
+  height: 26px;
+  background: url(/acp/static/image/aui-quick-search.png) no-repeat;
+}
+
+div.quick_search_box:hover {
+  background: url(/acp/static/image/aui-quick-search-hover.png) no-repeat;
+}
+
+div.quick_search_selected {
+  background: none !important;
+}
+
+#quickGoResults {
+  z-index: 9999;
+  display: none;
+  position: relative;
+  box-shadow: 0px 0px 6px #a2a2a2;
+  border: 1px solid #cfcfcf;
+  top: -2px;
+  width: 206px;
+}
+
+div.notification_log {
+  padding: 7px;
+}
+
+div.notification_log:hover {
+  background: #efefef;
+}
+
+div.notification_log strong {
+  position: relative;
+  top: 2px;
+}
+
+div.notification_log p {
+  margin-top: 6px;
+}
+
+div.quickGoTitle {
+  text-shadow: 1px 1px 1px white;
+  background: url(/acp/static/image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
+  padding: 6px 0px 9px 10px;
+  font-weight: bold;
+  color: #757575;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+#quickGo {
+  display: none;
+}
+
+/** 
+ * Styles
+ */
+
+h1 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+h2 {
+	margin: 0px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+h3 {
+  margin-left: 9px;
+  margin-top: 6px;
+}
+
+div.header {
+  padding: 10px;
+  background: url(/acp/static/image/aui-b2b-logo.png) no-repeat 13px 11px #fff;
+  height: 30px;
+}
+
+div.info {
+  float: right;
+  height: 100%;
+  text-align: right;
+}
+
+br.clear {
+  clear: both;
+}
+
+input {
+  border: 1px solid #a2a2a2;
+  padding: 3px;
+}
+
+input[type="checkbox"] {
+  border: 0;
+  padding: 0;
+}
+
+abbr {
+  border-bottom: 1px dotted #000;
+}
+
+ul.menu li.selected {
+	background-image: none !important;
+	background-color: white !important;
+	border-bottom-color: #fff !important;
+	border-bottom-width: 1px !important;
+	border-bottom-style: solid !important;
+	cursor: default !important;
+	height:14px;
+}
+
+img.middle {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+div.menu {
+  border-right-width: 0px;
+  border-left-width: 0px;
+
+  border-top-width: 1px;
+  border-color: #a2a2a2;
+  border-style: solid;
+  background: url(/acp/static/image/aui-menu-back.png);
+  height: 34px;
+  font-size: 9pt;
+  overflow: hidden;
+}
+
+div.container {
+	padding: 20px;
+}
+
+.grey {
+  color: #afafaf;
+}
+
+.hinted {
+  color: #afafaf;
+}
+
+ul.menu {
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+ul.sub_menu {
+	margin-left: 10px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 0px;
+	position: relative;
+	top: 9px;
+}
+
+ul.sub_menu li {
+	height: 19px;
+	float: left;
+	background: transparent;
+	margin: 0px;
+	padding: 4px;
+	display: inline;
+	list-style-position: outside;
+	list-style-type: none;
+	cursor: pointer;
+	position: relative;
+	 border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+	padding-right: 9px;
+	padding-left: 9px;
+	top: -5px;
+}
+
+ul.sub_menu li.selected {
+  background: #fff;
+  border-left: 1px solid #a2a2a2;
+  border-top: 1px solid #a2a2a2;
+  border-right: 1px solid #a2a2a2;
+}
+
+ul.sub_menu li a {
+  padding-left: 22px;
+  text-decoration: underline;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: 1px 0px;
+  padding-bottom: 3px;
+}
+
+ul.sub_menu li.selected a {
+  padding-left: 22px;
+  text-decoration: none;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: 1px 0px;
+}
+
+ul.menu li {
+	height: 13px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #a2a2a2;
+	float: left;
+	background-image: url(/acp/static/image/aui-menu-item.png);
+	margin: 0px;
+	padding: 10px;
+	display: inline;
+	list-style-position: outside;
+	list-style-type: none;
+	border-right-color: #a2a2a2;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-left-width: 1px;
+	border-left-color: white;
+	border-left-style: solid;
+	cursor: pointer;
+}
+
+ul.menu li:hover {
+	background-image: url(/acp/static/image/aui-menu-hover.png);
+}
+
+ul.menu li a {
+  padding-left: 22px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #000;
+  background-position: 0px 0px;
+  padding-bottom: 2px;
+}
+
+ul.menu li a.dashboard { background-image: url(/acp/static/icon/dashboard.png); }
+ul.menu li a.inventory { background-image: url(/acp/static/icon/box.png); }
+ul.menu li a.dealers { background-image: url(/acp/static/icon/user-business.png); }
+ul.menu li a.images { background-image: url(/acp/static/icon/images.png); }
+ul.menu li a.website { background-image: url(/acp/static/icon/website-coy-blue.png); }
+ul.menu li a.logout { background-image: url(/acp/static/icon/cross-circle.png); }
+ul.menu li a.orders { background-image: url(/acp/static/icon/money-coin.png); }
+ul.menu li a.data { background-image: url(/acp/static/icon/table.png); }
+ul.menu li a.statistics { background-image: url(/acp/static/icon/chart-up-color.png); }
+ul.menu li a.system { background-image: url(/acp/static/icon/gear.png); }
+
+/**
+ * Chat message link button
+ */
+ul.menu li a.messages-menu {
+  padding: 15px;
+  background-position: 1px 5px;
+  background-image: url(/acp/static/image/aui-chat-online.png) !important;
+}
+ul.menu li a.messages-animate {
+  background-position: 0px 4px !important;
+  background-image: url(/acp/static/image/aui-incoming.gif) !important;
+}
+ul.menu li a.messages-offline {
+  background-image: url(/acp/static/image/aui-chat-offline.png) !important;
+}
+
+
+
+div.notify-wrapper {
+  position: relative;
+  top: 120px;
+}
+
+div.sub_bar { 
+  background-position: 0 bottom; 
+  height: 32px; 
+  background-repeat: repeat-x;
+  background-image: url(/acp/static/image/aui-subbar.png);
+  overflow: hidden;
+}
+
+a.new {
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 14px;
+  background-image: url(/acp/static/image/aui-external.png);
+}
+
+a:visited {
+  color: #00f;
+}
+
+.disabled {
+	color: #dfdfdf;
+}
+
+.underfield {
+  margin: 7px 0px 0px 0px;
+  padding: 2px;
+  width: 200px;
+}
+
+.ghost {
+  display: none;
+}
+
+.rhs {
+  float: right;
+}
+
+.ui-widget-overlay {
+  margin: 0;
+}
+
+.badge {
+  font-weight: bold;
+  padding: 0px 5px 0px 5px;
+  color: #fff;
+  font-size: 8pt;
+  background: #ff0000;
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 12px 12px 12px 12px;
+  text-align: center;
+  min-width: 13px;
+  text-decoration: none !important;
+  margin-left: 1px;
+}
+
+.badge.grey {
+  background: #8f8f8f;
+}

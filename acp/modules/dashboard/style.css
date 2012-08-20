@@ -1,0 +1,96 @@
+div.threebox {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  background: #f5f5f5;
+  padding: 10px 0 10px 0;
+}
+
+div.threebox div.box {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+
+div.box table {
+  margin: auto;
+}
+
+div.box table tr td.key {
+  color: #666666;
+  padding-right: 70px;
+}
+
+div.box table tr td.value {
+  color: #000;
+}
+
+div.box table tr td.link {
+  padding-left: 20px;
+}
+
+img.chart {
+  margin: auto;
+}
+
+div.threesplit {
+    padding: 10px 10px 10px 0px;
+}
+
+div.threesplit div.box {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+
+div.notification_log {
+  padding: 7px;
+}
+
+div.notification_log strong {
+  position: relative;
+  top: 2px;
+}
+
+div.notification_log p {
+  margin-top: 6px;
+}
+
+div.cctv_log {
+  padding: 9px;
+  line-height: 18px;
+}
+
+div.cctv_log p {
+  margin-top: 6px;
+}
+
+p.rev-user {
+  color: #8d8d8d;
+}
+
+div.notification_log a {
+  max-height: 20px;
+  overflow: hidden;
+}
+
+img.photo {
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: middle;
+}
+
+div.rss {
+  min-height: 90px;
+  background-image: url(../../static/image/aui-loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+p.rev-comment {
+
+}
+
+div.rss div.notification_log {
+  padding-bottom: 10px;
+
+}

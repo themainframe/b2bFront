@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Order: {String: order_number}</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: Tahoma, Helvetica, sans-serif;
+        padding: 0px
+      }
+      
+      td, div, span {
+        font-size: 18.5pt;
+      }
+      
+      h1 {
+        margin: 0 0 20px 0;
+      	font-weight: 400;
+      	font-size: xx-large;
+      }
+      
+      h2 {
+      	margin: 0px;
+      	font-weight: 500;
+      }
+      
+      h3 {
+        margin-left: 9px;
+        margin-top: 6px;
+      }
+      
+      table.order {
+        width: 100%;
+        border-spacing: 0;
+      }
+      
+      td.orderheader {
+        background: #efefef;
+        padding: 10px;
+        border-bottom: 2px solid #afafaf;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Order {String: order_number ucase=true}</h1>
+    
+    <table style="width: 100%;">
+      <tr style="height: 25px">
+        <td class="datacell" style="width: 250px; font-weight: bold">Name</td>
+        <td class="datacell" style="width: 250px;">{String: name}</td>
+        <td class="datacell" style="width: 250px; font-weight: bold">Submitted</td>
+        <td class="datacell">{String: submitted}</td>
+      </tr>
+      <tr style="height: 25px">
+        <td class="datacell" style="width: 250px; font-weight: bold">User Name</td>
+        <td class="datacell">{String: username}</td>
+      {If: processed == 1}
+        <td class="datacell" style="width: 250px; font-weight: bold">Processed</td>
+        <td class="datacell">{String: processed_date}</td>
+      {/If: processed == 1}
+      </tr>
+      <tr style="height: 25px">
+        <td class="datacell" style="width: 250px; font-weight: bold">Account Ref#</td>
+        <td class="datacell">{String: account}</td>
+      </tr>
+      <tr style="height: 25px">
+        <td class="datacell" style="width: 250px; font-weight: bold">Contact Phone</td>
+        <td class="datacell">{String: phone}</td>
+      </tr>
+      <tr style="height: 25px">
+        <td class="datacell" style="width: 250px; font-weight: bold">Contact Email</td>
+        <td class="datacell">{String: email}</td>
+      </tr>
+    </table>
+    
+   
+    
+    <br /><br />
+    
+    <table style="width: 100%;" class="order">
+
+      <thead>
+      
+      <tr>
+        <td style="width: 160px" class="orderheader">SKU</td>
+        <td class="orderheader">Name</td>
+        <td class="orderheader">Qty</td>
+        <td class="orderheader">Each @</td>
+        <td class="orderheader">Subtotal</td>
+      </tr>
+      
+      </thead>
+
+      <tbody>
+      
+        {Each: lines as line}
+        
+        <tr style="height: 25px">
+          <td class="datacell">
+            {String: line.sku}
+          </td>
+          <td class="datacell">
+            {String: line.tags}
+            {String: line.name}
+          </td>
+          <td class="datacell">
+            {Integer: line.quantity}
+          </td>
+          <td class="datacell">
+            {Decimal: line.invoice_price_each}
+          </td>
+          <td class="datacell">
+            {Decimal: line.subtotal}
+          </td>
+        </tr>
+        
+        {/Each: lines}
+        
+      </tbody>
+      
+    </table>
+    <hr style="border: 1px solid #afafaf" />
+
+    {If: notes_count > 0}
+    
+    <br />
+    
+
+    <div style="padding: 0px 30px 0px 30px; line-height: 15px">
+        
+      <h3 style="margin:0;">Notes</h3>
+      
+      <br />
+      
+      <table>
+      {Each: notes as note}
+        <tr>        
+          <td style="width: 280px;"><strong>{String: note.author_name}</strong></td>
+          <td>{String: note.content}</td>
+        </tr>
+      {/Each: notes}
+      </table>
+    
+    </div>
+    
+    <br />
+    
+    <hr style="border: 1px solid #afafaf" />
+       <br /><br />
+      
+    {/If: notes_count > 0}
+    
+    <div style="font-weight: bold; text-align: center; color: #cfcfcf; line-height: 20px">
+      E N D  &nbsp;&nbsp;&nbsp;  O F  &nbsp;&nbsp;&nbsp;  O R D E R<br />
+      {Integer: lines_count} lines total
+    </div>
+    
+  </body>
+</html>

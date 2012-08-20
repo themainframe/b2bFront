@@ -1,0 +1,256 @@
+select.used {
+  outline: 2px dotted #c55454 !important  ; 
+  border-radius: 2px !important;
+}
+
+input.used {
+  outline: 2px dotted #c55454 !important  ; 
+  border-radius: 2px !important;
+}
+
+.data_dropdown {
+  border: 1px solid #afafaf;
+}
+
+div.twobox {
+  margin: 10px;
+  padding-left:
+}
+
+div.twobox div.box {
+  width: 50%;
+  float: left;
+  cursor: pointer;
+}
+
+div.twobox div.box div {
+  padding: 10px;
+  margin: 0px 10px 0px 0px;
+  border: 1px solid #5d5d5d;
+  background: #f0f0f0;
+  height: 125px;
+}
+
+div.twobox div.box div:hover {
+  border-color: #a2a2a2;
+  background-position-y: bottom !important;
+  background-color: #fff !important;
+} 
+
+div.threebox {
+  width: 100%;
+  background: #f5f5f5;
+  height: 100%;
+}
+
+div.threebox div.box {
+  width: 33%;
+  height: 100%;
+  float: left;
+}
+
+div.box input {
+  margin-top: 5px;
+}
+
+#category_tree {
+  width: 300px;
+  height: 150px;
+  background: #fff;
+  padding: 4px;
+  border: 1px solid #a2a2a2;
+  margin: 10px 0px 10px 0px;
+  overflow: auto;
+}
+
+table tbody tr td.predicate {
+  padding: 0px 10px 0px 10px;
+}
+
+tr.category {
+  font-weight: bold;
+  height: 30px;
+}
+
+tr.category td.name {
+  vertical-align: middle;
+}
+
+tr.subcategory td {
+  background: #ebebeb;
+  vertical-align: middle;
+}
+
+tr.subcategory {
+  font-size: 90%;
+}
+
+tr.subcategory td.name {
+  padding-left: 30px;
+}
+
+td.tools {
+  padding-right: 10px;
+  text-align: right;
+}
+
+table.suboptions {
+  margin: 10px 0px 10px 0px;
+  border: 1px solid #cfcfcf;
+}
+
+table.suboptions thead tr {
+  padding: 8px; height: 10px; width: 200px;
+  border-bottom: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-menu-item.png) repeat-x;
+}
+
+table.suboptions thead td {
+  padding: 8px; height: 10px;
+}
+
+table.suboptions tbody tr {
+  padding: 8px; height: 10px; width: 200px;
+  border: none;
+}
+
+table.suboptions tbody td {
+  padding: 8px; height: 10px; width: 200px;
+}
+
+table.suboptions tbody td.value {
+  border-left: 1px solid #cfcfcf;
+  width: 16px;
+  text-align: center;
+}
+
+img.new {
+  margin:0;
+  position:relative;
+  top:-1px;
+  left: 1px;
+}
+
+div.images {
+  overflow: auto;
+  max-height: 203px;
+}
+
+div.images img {
+  margin: 10px;
+  border: 2px solid #afafaf;
+}
+
+/*
+* Category Modification
+*/
+
+div.image {
+  float: left;
+  margin: 10px 10px 10px 0px; 
+  width:100px; height:75px; 
+  border:2px solid #afafaf;
+  background: #fff;
+  cursor: pointer;
+}
+
+div.selected_image {
+  border: 2px solid #94a6ff;
+}
+
+/*
+* Query Builder
+*/
+
+span.block {
+  border: 2px solid #bebebe;
+  background: #d4d4d4;
+  padding: 4px;
+  margin: 0px 4px 0px 0px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  line-height: 35px;
+  height: 16px;
+}
+
+span.boolean {
+  border: 2px solid #88c795;
+  background: #b2ffc2;
+}
+
+span.value {
+  border: 2px solid #88a0c7;
+  background: #b6d0fd;
+}
+
+span.compare {
+  border: 2px solid #cb9494;
+  background: #fdb6b6;
+}
+
+.placehold {
+  padding: 4px 10px 4px 10px;
+  height: 16px;
+  border: 2px dotted #bebebe;
+  -moz-border-radius: 6px;
+}
+
+.ui-sortable-helper {
+  font-size: 1px;
+}
+
+/**
+ * Parentizer
+ */
+
+td.newrow {
+  background: url(/acp/static/image/aui-menu-back.png) repeat-x;
+  height: 27px;
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid #afafaf;
+}
+
+td.existing_child {
+  color: #8f8f8f;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+
+div.domain_menu_item {
+  padding: 6px;
+}
+
+a.notext {
+  padding: 2px 2px 3px 2px;
+}
+
+a.notext img {
+  margin: 0px 0px 0px 2px;
+  position: relative;
+  left: 1px;
+}
+
+/**
+ * Labels
+ */
+
+span.label {
+  padding: 3px 5px 3px 5px;
+  position: relative;
+  top: 1px;
+  left: -3px;
+  border: 1px solid #afafaf;
+  font-size: 7pt;
+}
+
+span.label_small {
+  padding: 2px 5px 2px 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #000 !important;
+  background-image: url(/acp/static/image/aui-label-shine.png);
+  background-repeat: repeat-x;
+}

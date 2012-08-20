@@ -1,0 +1,13 @@
+div.note {
+  background: #faf7bb;
+  padding: 10px;
+  border-top: 1px solid #bba981;
+}
+
+div.last {
+  background-image: url(/acp/static/image/aui-zags.png);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  padding: 10px 10px 30px 10px;
+  margin: 0px 0px 20px 0px;
+}

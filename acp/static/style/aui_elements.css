@@ -1,0 +1,430 @@
+/**
+ * Panel Elements
+ */
+ 
+div.panel {
+  border: 1px solid #a2a2a2;
+  background: #f5f5f5;
+}
+
+div.panel div.title {
+  text-shadow: 1px 1px 1px white;
+  background: url(/acp/static/image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
+  padding: 6px 0px 9px 10px;
+  font-weight: bold;
+  color: #757575;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+div.panel div.contents {
+  padding: 10px;
+}
+
+div.panel div.fieldset {
+  padding: 0px 20px 0px 20px;
+}
+
+div.panel div.contents p {
+  padding: 10px;
+}
+
+div.panel div.message {
+  padding: 15px;
+  border-bottom: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-message-stripe.png);
+}
+
+div.no_data {
+  padding: 20px;
+  background: url(/acp/static/image/aui-message-stripe.png);
+  text-align: center;
+  font-weight: bold;
+  color: #a2a2a2;
+  border: 1px solid #a2a2a2;
+  border-top-width: 0px;
+}
+
+div.panel div.warning {
+  padding: 15px;
+  border-bottom: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-warning-stripe.png);
+}
+
+.gradient {
+  background: #ececec url(/acp/static/image/aui-gradient.png) repeat-x;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+#confirmation {
+  font-size: 8pt;
+  overflow: hidden;
+}
+
+#confirmation p {
+  padding: 10px;
+  overflow: hidden;
+}
+
+/**
+ * Icon Picker
+ */
+
+div.iconpicker {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  height: 100px;
+  overflow: auto;
+  width: 265px;
+  outline: 1px solid transparent;
+}
+
+div.iconpicker img {
+  padding: 3px;
+  border: 1px solid #cfcfcf;
+  margin: 2px;
+  background: url(/acp/static/image/aui-menu-item.png);
+}
+
+div.iconpicker img:hover {
+  border: 1px solid #afafaf;
+  background: #fff;
+}
+
+div.iconpicker img.selected {
+  border: 1px solid #94a6ff;
+  outline: 1px solid #94a6ff;
+}
+
+/**
+ * Data Table Elements
+ */
+
+table.data {
+  border: 1px solid #a2a2a2;
+  width: 100%;
+}
+
+table.data thead tr.header {
+  background: url(/acp/static/image/aui-menu-item.png)  #dfdfdf 0px -5px repeat-x;
+  height: 30px;
+  border-bottom: 1px solid #a2a2a2;
+}
+
+table.data thead tr td {
+  text-shadow: 1px 1px 1px white;
+  font-weight: bold;
+  color: #757575;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-bottom: 7px;
+}
+
+table.data thead tr td a {
+  color: #757575;
+  padding-right: 15px;
+}
+
+table.data thead tr td a.desc {
+  background: url(/acp/static/image/aui-descending.png) transparent right bottom no-repeat;
+}
+
+table.data thead tr td a.asc {
+  background: url(/acp/static/image/aui-ascending.png) transparent right bottom no-repeat;
+}
+
+table.data tbody tr {
+  height: 25px;
+  background: #fff;
+}
+
+table.data tbody tr.alt {
+  background: #ebebeb;
+}
+
+table.data tbody tr td {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+}
+
+/**
+ * Editable columns
+ */
+ 
+input.edit {
+  width: 80%;
+  font-size: 95%;
+  padding: 1px;
+  position: relative;
+  left: -2px;
+}
+
+span.editable {
+  -moz-user-select: none;
+  border: 1px solid transparent;
+    padding: 1px;
+  display: block;
+  height: 12px;
+  cursor: url(/acp/static/image/aui-sheet.cur), default;
+}
+
+span.editable:hover {
+  border: 1px dotted #000;
+  background: #fff;
+  padding: 1px;
+  position: relative;
+  left: -2px;
+}
+
+span.ui-draggable-dragging {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 2px;
+}
+
+/**
+ * Field Sets
+ */
+
+table.fields {
+  border-spacing: 5px;
+  width: 100%;
+}
+
+table.fields tbody tr {
+  height: 80px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+table.fields tbody tr td {
+  vertical-align: middle;
+}
+
+table.fields tbody tr td.key {
+  width: 500px;
+}
+
+table.fields tbody tr.last {
+  border: none;
+}
+
+#thumbview{
+	position:absolute;
+	border: 3px solid #afafaf;
+	background:#fff;
+	display:none;
+	color:#fff;
+  -moz-box-shadow: 0 0 2px #5d5d5d;
+  -webkit-box-shadow: 0 0 2px #5d5d5d;
+  box-shadow: 0 0 2px #5d5d5d;
+}
+
+/**
+ * In-field tools
+ */
+
+a.tool img {
+  margin: 0px 3px 0px 3px;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+a.tool {
+  position: relative;
+  top: -2px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+  font-size: 7pt;
+  cursor: pointer;
+  margin: 0px 3px 1px 0px;
+  background: url(/acp/static/image/aui-button.png) repeat-x;
+  border: 1px solid #c2c2c2;
+  padding: 2px 6px 3px 2px;
+  vertical-align: middle;
+}
+
+a.tool:hover {
+  background: url(/acp/static/image/aui-menu-back.png) 0px -15px repeat-x;
+}
+
+/**
+ * Pager
+ */
+
+div.pager {
+  border: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-gradient.png) center center repeat-x;
+}
+
+div.pager table tbody tr td {
+  vertical-align: middle;
+  padding: 5px 7px 5px 7px;
+}
+
+div.pager table tbody tr td.pager_text {
+  border-right: 1px solid #a2a2a2;
+}
+
+div.pager table tbody tr td.right {
+  border-right: none;
+}
+
+div.pager td.page {
+  border-right: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-menu-item.png) transparent 0px -5px repeat-x;
+  width: 10px;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+td.pager_text input {
+  width: 40px;
+  font-size: 6pt; padding: 2px;
+
+}
+
+td.pager_text select {
+  margin: 0px;
+  font-size: 6pt;
+  border: 1px solid #a4a4a4;
+ }
+
+div.pager td.page a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 4px;
+}
+
+div.pager td.current {
+  background: url(/acp/static/image/aui-menu-back.png) transparent 0px -5px repeat-x;
+  border-top: 1px solid #9f9f9f;
+  border-bottom: 1px solid #9f9f9f;
+}
+
+div.pager td div.icon {
+  padding: 6px;
+  display: inline;
+}
+
+div.pager td a.first {
+  background: url(/acp/static/image/aui-leftleft.png) scroll no-repeat center center;
+}
+
+div.pager td a.back {
+  background: url(/acp/static/image/aui-left.png) scroll no-repeat center center;
+}
+
+div.pager td a.forward {
+  background: url(/acp/static/image/aui-right.png) scroll no-repeat center center;
+}
+
+div.pager td a.last {
+  background: url(/acp/static/image/aui-rightright.png) scroll no-repeat center center;
+}
+
+/**
+ * Inputs and Interactions
+ */
+ 
+input.submit {
+  background: url(/acp/static/image/aui-button.png) repeat-x;
+  color: #000;
+  font-weight: bold;
+  padding: 4px 9px 4px 9px;
+  cursor: pointer;
+}
+ 
+input.ok {
+  background: url(/acp/static/image/aui-button-ok.png) repeat-x;
+  color: #fff;  
+}
+
+input.bad {
+  background: url(/acp/static/image/aui-button-bad.png) repeat-x;
+  color: #fff;  
+}
+
+span.button {
+  background: url(/acp/static/image/aui-button.png) repeat-x;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  outline: 1px solid #a2a2a2;
+  margin: 4px 4px 4px 8px;
+}
+
+.bad {
+  background: url(/acp/static/image/aui-button-bad.png) repeat-x !important;
+  color: #fff !important;  
+}
+
+span.button span.img {
+  padding: 1px 12px 2px 10px;
+  background-repeat: no-repeat;
+}
+
+span.button a {
+  color: #000;
+  text-decoration: none;
+  padding-right: 6px;
+}
+
+span.error_message {
+  font-weight: bold;
+  color: #f00;
+  padding-bottom: 5px;
+}
+
+.error {
+  background: url(/acp/static/image/aui-warning-stripe.png);
+}
+
+div.formlistbuilder table tr td {
+  padding: 5px;
+}
+
+div.formlistbuilder table tr td input {
+  margin-left: 10px;img
+}
+
+span.checkmark {
+  padding: 1px 8px 8px 8px;
+  background: url(/acp/static/icon/tick-button-no.png) no-repeat;
+}
+
+span.yes {
+  background-image: url(/acp/static/icon/tick-button.png)
+}
+
+input[type=file]
+{
+  border: 0;
+}
+
+/** 
+ * Info
+ */
+
+
+table.info tr {
+  height: 20px;
+}
+
+table.info tr td {
+  padding: 5px 5px 5px 15px;
+  width: 25%;
+}
+
+table.info tr td.key {
+  font-weight: bold;
+  padding: 5px 15px 5px 5px;
+  background: #dfdfdf;
+  text-align: right;
+}

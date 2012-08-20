@@ -1,0 +1,29 @@
+table.suboptions {
+  margin: 10px 0px 10px 0px;
+  border: 1px solid #cfcfcf;
+}
+
+table.suboptions thead tr {
+  padding: 8px; height: 10px; width: 200px;
+  border-bottom: 1px solid #a2a2a2;
+  background: url(/acp/static/image/aui-menu-item.png) repeat-x;
+}
+
+table.suboptions thead td {
+  padding: 8px; height: 10px;
+}
+
+table.suboptions tbody tr {
+  padding: 8px; height: 10px; width: 200px;
+  border: none;
+}
+
+table.suboptions tbody td {
+  padding: 8px; height: 10px; width: 200px;
+}
+
+table.suboptions tbody td.value {
+  border-left: 1px solid #cfcfcf;
+  width: 16px;
+  text-align: center;
+}

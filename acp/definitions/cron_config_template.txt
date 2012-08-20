@@ -1,0 +1,5 @@
+*/5 * * * * curl "{url}/automated/?token={token}&run=5minute"
+0 * * * * curl "{url}/automated/?token={token}&run=hour"
+0 0 * * * curl "{url}/automated/?token={token}&run=day"
+0 0 * * 0 curl "{url}/automated/?token={token}&run=week"
+0 0 1 * * curl "{url}/automated/?token={token}&run=month"

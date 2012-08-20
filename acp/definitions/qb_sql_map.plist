@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bool_and</key>
+	<string> AND </string>
+	<key>bool_not</key>
+	<string> NOT </string>
+	<key>bool_or</key>
+	<string> OR </string>
+	<key>bool_xor</key>
+	<string> XOR </string>
+	<key>bracket_l</key>
+	<string>(</string>
+	<key>bracket_r</key>
+	<string>)</string>
+	<key>contains</key>
+	<string> LIKE</string>
+	<key>equal</key>
+	<string> = </string>
+	<key>f_free_stock</key>
+	<string>`bf_items`.`stock_free`</string>
+	<key>f_held_stock</key>
+	<string>`bf_items`.`stock_held`</string>
+	<key>f_name</key>
+	<string>`bf_items`.`name`</string>
+	<key>f_pro_net_price</key>
+	<string>`bf_items`.`pro_net_price`</string>
+	<key>f_pro_net_qty</key>
+	<string>`bf_items`.`pro_net_qty`</string>
+	<key>f_rrp_price</key>
+	<string>`bf_items`.`rrp_price`</string>
+	<key>f_total_stock</key>
+	<string>(`bf_items`.`stock_held` + `bf_items`.`stock_free`)</string>
+	<key>f_trade_price</key>
+	<string>`bf_items`.`trade_price`</string>
+	<key>gt</key>
+	<string> &gt; </string>
+	<key>gte</key>
+	<string>&gt;=</string>
+	<key>let</key>
+	<string> &lt;= </string>
+	<key>lt</key>
+	<string> &lt; </string>
+	<key>not_equal</key>
+	<string> &lt;&gt; </string>
+	<key>value</key>
+	<string>'{1}'</string>
+</dict>
+</plist>

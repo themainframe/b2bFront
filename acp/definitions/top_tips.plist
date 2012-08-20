@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0</key>
+	<dict>
+		<key>title</key>
+		<string>New Orders</string>
+		<key>content</key>
+		<string>The number to the right of the &quot;Orders&quot; tab is the number of unprocessed orders currently waiting.</string>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>title</key>
+		<string>Quick Go</string>
+		<key>content</key>
+		<string>See the box above? You can type almost anything and b2bFront will find it for you - Try it!</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>content</key>
+		<string>You can import data into the Inventory from a variety of spreadsheet formats using the &lt;a href=&quot;./?act=data&quot;&gt;Import Data&lt;/a&gt; view.</string>
+		<key>title</key>
+		<string>Importing Data</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>content</key>
+		<string>You can use Template Tags inside descriptions of Standard Items to show classification attributes.  For example {Colour} or {Widget Type}.</string>
+		<key>title</key>
+		<string>Standard Item Descriptions</string>
+	</dict>
+	<key>4</key>
+	<dict>
+		<key>content</key>
+		<string>Labels can help you keep track of items in the Inventory by grouping associated products together.  They aren't visible outside of the ACP at all.</string>
+		<key>title</key>
+		<string>Labels</string>
+	</dict>
+	<key>5</key>
+	<dict>
+		<key>content</key>
+		<string>You can get information on new releases, plugins, skins and more great resources from &lt;a href=&quot;http://www.b2bfront.com/&quot;&gt;www.b2bfront.com&lt;/a&gt;</string>
+		<key>title</key>
+		<string>b2bFront.com</string>
+	</dict>
+</dict>
+</plist>
