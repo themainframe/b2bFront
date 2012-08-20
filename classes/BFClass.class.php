@@ -139,7 +139,7 @@ class BFClass
   public function __construct($debug = false)
   {
     // Software Version Information
-    define('BF_VERSION', 'b2bfront-1.2.5-avo');
+    define('BF_VERSION', 'b2bfront-1.3');
     
     // Definitions
     define('BF_MAX_LOG_SIZE', 1048576);
@@ -167,7 +167,7 @@ class BFClass
     $this->parseInputs();
   
     // Connect to database
-    $this->db = new Database(BF_SQL_USER, BF_SQL_PASS, BF_SQL_HOST, BF_SQL_DB, & $this);
+    $this->db = new Database(BF_SQL_USER, BF_SQL_PASS, BF_SQL_HOST, BF_SQL_DB, $this);
     
     // Access to config
     $this->config = new Config($this, $this->db);
@@ -381,7 +381,7 @@ class BFClass
   public function loadView($viewName, $skipRendering = false)
   {
     // Create a new view
-    $this->view = new View($viewName, & $this, $skipRendering);
+    $this->view = new View($viewName, $this, $skipRendering);
   }
 
   /**
@@ -402,17 +402,17 @@ class BFClass
     try
     {
       // Instanciate
-      $this->model = new $modelName(& $this);
+      $this->model = new $modelName($this);
      
       // Plugin event:
-      $this->pluginServer->modelWillExecute(& $this->parent, $modelName);
+      $this->pluginServer->modelWillExecute($this->parent, $modelName);
             
       // Render
       $this->model->execute();
       $values = $this->model->getValues();
 
       // Plugin event:
-      $this->pluginServer->modelDidExecute(& $this->parent, $modelName);
+      $this->pluginServer->modelDidExecute($this->parent, $modelName);
       
       // Apply the results to the loaded view
       $this->view->assign($values);
@@ -437,7 +437,7 @@ class BFClass
   public function shutdown()
   {
     // Plugin event:
-    $this->pluginServer->b2bfrontWillShutdown(& $this->parent);
+    $this->pluginServer->b2bfrontWillShutdown($this->parent);
   
     // Flush output
     $this->out->flush();

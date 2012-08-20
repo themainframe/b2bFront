@@ -147,13 +147,13 @@ class View extends Base
     {
       // Plugin event:
       $this->values = 
-        $this->parent->pluginServer->viewWillRender(& $this->parent, $this->name, $this->values);
+        $this->parent->pluginServer->viewWillRender($this->parent, $this->name, $this->values);
     
       // Parse the whole text
       $this->viewTemplate = $this->parse($this->viewTemplate);
       
       // Done
-      $this->parent->pluginServer->viewDidRender(& $this->parent, $this->name);
+      $this->parent->pluginServer->viewDidRender($this->parent, $this->name);
     }
     
     return true;
