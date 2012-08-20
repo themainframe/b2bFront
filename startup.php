@@ -18,7 +18,7 @@ if(!defined('BF_CONTEXT_INDEX'))
 define('BF_PROFILING', false);
 
 // Define the root path of the application
-$_ROOT = '/var/www/';
+$_ROOT = getcwd() . '/';
 
 //
 // No more configuration beyond this point

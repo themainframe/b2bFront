@@ -19,7 +19,7 @@ if(!defined("BF_CONTEXT_INSTALLER") && !defined("BF_CONTEXT_INDEX") &&
 define('BF_SQL_USER',   'root');
 define('BF_SQL_PASS',   'root');
 define('BF_SQL_DB',     'b2bfront');
-define('BF_SQL_HOST',   '127.0.0.1');
+define('BF_SQL_HOST',   '127.0.0.1:8889');
 
 // Define the system secret
 // This is used to Salt passwords stored in the database.
