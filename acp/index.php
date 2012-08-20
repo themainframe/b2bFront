@@ -27,7 +27,7 @@ $BF = new BFClass();
 
 // Change Config path
 $BF->config->setPath('com.b2bfront.acp');
-$BF->admin = new Admin(& $BF);
+$BF->admin = new Admin($BF);
 
 // Make main class global
 global $BF;

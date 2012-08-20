@@ -171,7 +171,7 @@ class Admin extends Base
     if(class_exists($className))
     {
       // New Object with BFClass and DB class access
-      $this->APIs[$className] = new $className(& $this->parent, & $this->parent->db);
+      $this->APIs[$className] = new $className($this->parent, $this->parent->db);
     }
     
     return true;
