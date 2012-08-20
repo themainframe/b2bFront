@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Tahoma, Helvetica, sans-serif;
   font-size: 9pt;
-  background: url(/acp/static/image/aui-login.png) no-repeat center center;
+  background: url(../../static/image/aui-login.png) no-repeat center center;
 }
 
 div.container_red {
@@ -16,7 +16,7 @@ div.container_red {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: transparent url(/acp/static/image/aui-login-red.png) no-repeat center center;
+  background: transparent url(../../static/image/aui-login-red.png) no-repeat center center;
   z-index: 99;
   display: none;
 }
@@ -24,7 +24,7 @@ div.container_red {
 div.container {
   width: 100%;
   height: 100%;
-  background: url(/acp/static/image/aui-login.png) no-repeat center center;
+  background: url(../../static/image/aui-login.png) no-repeat center center;
   z-index: -1;
 }
 
@@ -52,7 +52,7 @@ input.field {
 input.submit
 {
   font-size: 12pt;
-  background: url(/acp/static/image/aui-subbar.png);
+  background: url(../../static/image/aui-subbar.png);
   border: 1px solid #cfcfcf;
   padding: 4px;
   margin: 10px 0 0 0;

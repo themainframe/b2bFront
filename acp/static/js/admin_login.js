@@ -35,7 +35,7 @@ function notify(title, message, iconURL, persist)
  $('#notifications').jnotifyAddMessage({
                      text: '<strong>' + title + '</strong><br /><p>' + message + '</p>',
                      permanent: persist,
-                     icon: '/acp/static/icon/' + iconURL
+                     icon: 'static/icon/' + iconURL
                    });
                    
   //setIcon();
