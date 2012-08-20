@@ -19,7 +19,7 @@ require_once 'tools.php';
 include 'startup.php';
 
 // Start the main class.
-$BF = new BFClass();
+$BF = new BFClass(true);
 global $BF;
 
 // Increment hits on homepage
