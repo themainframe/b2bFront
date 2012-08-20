@@ -18,7 +18,7 @@ require_once(BF_ROOT . 'tools.php');
 
 // New BFClass & Admin class
 $BF = new BFClass();
-$BF->admin = new Admin(& $BF);
+$BF->admin = new Admin($BF);
 
 if(!$BF->admin->isAdmin)
 {
