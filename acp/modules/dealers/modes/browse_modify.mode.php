@@ -39,17 +39,40 @@ $row = $BF->db->next();
 
 <script type="text/javascript">
 
+  var id = <?php print $ID; ?>;
+  
   $(function() {
   
     $('#dd_f_dealer_profile').change(function() {
       $('#profile_modify').attr('href', '/acp/?act=dealers&mode=profiles_modify&id=' + $(this).val());
     }).change();
+    
+    $('#remove').click(function() {
+      
+      confirmation('Are you sure?<br />This will permanently remove the dealer.', function() {
+        window.location = './?act=dealers&mode=browse_remove_do&id=' + id;
+      });
+      
+    });
 
   });
 
 </script>
 
 <h1><?php print $row->description; ?></h1>
+<br />
+
+
+<div class="panel" style="border: 1px solid #95504b">
+  <div class="contents">
+    <p style="padding: 7px 0px 0px 5px; float: left; color: #95504b;">
+      <strong>Click the button to the right to remove this dealer.</strong>
+    </p>
+    <input class="submit bad" type="button" id="remove" style="float: right;" value="Remove and Exit..." />
+    <br class="clear" />
+  </div>
+</div>
+
 <br />
 
 <form action="./?act=dealers&mode=browse_modify_do" method="post">
