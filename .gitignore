@@ -1,0 +1,28 @@
+#
+# b2bFront gitignore
+# Excludes installation-specific clutter from the repo
+#
+
+#
+# Libraries, skins, temp/store locations
+#
+libraries
+skins
+temp
+store
+restore_points
+dev_scripts
+errors
+
+#
+# Website-specific
+#
+robots.txt
+sql_detail.php
+favicon.ico
+.htaccess
+
+#
+# Automation lockfiles
+#
+automated/last-scheduled-event
