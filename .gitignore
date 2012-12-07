@@ -16,6 +16,7 @@ store
 restore_points
 dev_scripts
 errors
+catalogue
 
 #
 # Website-specific
