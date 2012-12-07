@@ -94,3 +94,47 @@ div.rss div.notification_log {
   padding-bottom: 10px;
 
 }
+
+
+/**
+ * Issues
+ */
+
+div.issues {
+  padding: 10px;  
+}
+
+textarea#issue {
+  width: 98%;
+  resize: none;
+  margin-top: 10px;
+  height: 50px;
+  padding: 4px;
+  font-size: 10pt;
+}
+
+textarea.stretch {
+  height: 100px !important;
+}
+
+strong#title_title {
+  float: left;
+  position: relative;
+  top: 6px;
+}
+
+input#title {
+  width: 83%;
+  float: right;
+}
+
+div.issue_lhs {
+  float: left;
+  width: 40%;
+  padding-top: 10px;
+}
+
+div.issue_rhs {
+  float: right;
+  width: 60%;
+}

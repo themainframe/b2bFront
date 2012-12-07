@@ -58,31 +58,87 @@ function activityGraphData()
   $(function()
   {
     // Retrieve CCTV every second
-    getCCTV();
+    getCCTV();   
     
-    // RSS Loader
-   jQuery.getFeed({
-       url: 'ajax/custom_feed_proxy.ajax.php',
-       success: function(feed) {
-       
-           html = '';
-       
-           for(var i = 0; i < feed.items.length && i < 6; i++)
-           {
-                var item = feed.items[i];
-           
-                html += '<div class="notification_log gradient">';
-
-                
-                html += ''
-                + item.description
-                + '</div>';
-           }
-           
-           jQuery('div.rss').append(html);
-       }
-   });
+    // Add focus
+    $('#issue').focus(function() {
+      
+      $(this).addClass('stretch', 'fast');
+      
+    }).blur(function() {
+      
+      $(this).removeClass('stretch', 'fast');
+      
+    });
     
+    
+    // Focus title
+    $('#title').focus(function() { $(this).removeClass('error'); } );
+    
+    
+    // Completion
+    $('#issue_c').click(function() {
+      
+      // Loading
+      loadingScreen();
+      
+      // Validate
+      if($('#title').val() == '')
+      {
+        // Invalid
+        $('#title').addClass('error');
+        
+        hideLoadingScreen();
+        return false;
+      }
+      
+      // All OK
+      console.log('Submitting');
+      
+      $.ajax(
+      {
+        'url' : './ajax/dashboard_issue_create.ajax.php',
+        
+        'data' : {
+          'title' : $('#title').val(),
+          'body' : $('#issue').val(),
+          'label' : $('#urgent').is(':checked') ? 'acp_urgent' : 'acp_general'
+          
+        },
+        
+        'error' : function(a, b) {
+          
+          showMessage('Sorry - the issue could not be created.<br />Please contact Transcend.',
+            function() { });
+          hideLoadingScreen();
+          
+        },
+        
+        'complete' : function() 
+        {
+          console.log('done');
+          hideLoadingScreen();
+          
+        },
+        
+        'success' : function(data) {
+        
+        // Clear
+        $('#title').val('');
+        $('#issue').val('');
+        $('#urgent').attr('checked', false);
+        
+        // Show confirmation
+        hideLoadingScreen();
+        showMessage('Thank you<br />The issue has been created.', function() { });
+      },
+      
+      'type': 'POST'
+        
+      });
+      
+    });
+     
   });
   
   /**
@@ -218,6 +274,34 @@ function activityGraphData()
 <?php
   }
 ?>
+
+<?php
+
+  if($BF->admin->can('chat'))
+  {
+  
+?>
+
+      <div class="panel" style="margin: 20px 0px 10px 0px;">
+      <div class="title">Staff</div>
+      <div class="content" id="im-system">
+      
+          <div style="text-align: center; margin: 15px 0px 15px 0px;" id="no-staff">
+          <strong>No staff are currently logged in.</strong>
+          </div>
+
+      </div>
+    </div>
+    
+    <a href="./?act=system&mode=admins"  style="margin:10px 10px 10px 10px;">Manage Staff...</a>
+ 
+  
+<?php
+
+  }
+  
+?>
+
   
     <div class="panel" style="margin:20px 0px 10px 0px;">
       <div class="title">Unprocessed Orders</div>
@@ -270,13 +354,6 @@ function activityGraphData()
 
     <br /><br />
 
-    <div class="panel" style="margin: 0px 0px 10px 0px;">
-      <div class="title">What's New?</div>
-      <div class="content rss">
-        
-      </div>
-    </div>
-
   </div>
   
 
@@ -301,32 +378,47 @@ function activityGraphData()
     -->    
         
 
-<?php
-
-  if($BF->admin->can('chat'))
-  {
-  
-?>
-
-      <div class="panel" style="margin: 0px 10px 10px 10px;">
-      <div class="title">Staff</div>
-      <div class="content" id="im-system">
+   <div class="panel" style="margin: 0px 10px 10px 10px;">
+    <div class="title">Raise an Issue...</div>
       
-          <div style="text-align: center; margin: 15px 0px 15px 0px;" id="no-staff">
-          <strong>No staff are currently logged in.</strong>
-          </div>
+      <div class="content issues">
+ 
+         <div style="text-align: center; margin-top: 6px; font-weight: bold">
+           Tell us about a problem or suggest an improvement...
+         </div>
+         
+                 <div class="grey" style="text-align: center; margin-top: 6px">Please be specific - include relevant URLs if you can!</div>
+         
+         <br />
+        
+        <strong id="title_title">Title: </strong> &nbsp; <input type="text" id="title" /> 
+        <br /> <br />
+        
 
-      </div>
-    </div>
-    
-    <a href="./?act=system&mode=admins"  style="margin:10px 10px 10px 10px;">Manage Staff...</a>
-    <br /><br />
-  
-<?php
+               
+        <textarea id="issue"></textarea>
+        
+        
+        <br />
+        
+        <div class="issue_lhs">
+          <input type="checkbox" id="urgent" value="acp_urgent" /> &nbsp; <strong>Issue is urgent</strong>
+        </div>
+        
+        <div class="issue_rhs">
+        <input class="submit ok" type="button" id="issue_c" style="float: right; margin-top: 10px;" value="Create Issue" />
+        </div>
+        
+ 
+        
+       <br /><br />
+        
+      </div><br class="clear" />
+   </div>
 
-  }
-  
-?>
+
+
+
         
 <?php
 
