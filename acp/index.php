@@ -27,7 +27,7 @@ $BF = new BFClass();
 
 // Change Config path
 $BF->config->setPath('com.b2bfront.acp');
-$BF->admin = new Admin($BF);
+$BF->admin = new Admin(& $BF);
 
 // Make main class global
 global $BF;
@@ -119,7 +119,7 @@ if(array_key_exists($moduleName, $menu))
 		  // Load the stylesheet for a module if it exists
 		  if(Tools::exists('/acp/modules/' . $moduleName . '/style.css'))
 		  {
-		    print '    <link rel="stylesheet" type="text/css" href="' . 'modules/' . $moduleName . '/style.css' . '" />';
+		    print '    <link rel="stylesheet" type="text/css" href="' . '/acp/modules/' . $moduleName . '/style.css' . '" />';
 		  }
 		  
 ?>
@@ -401,6 +401,29 @@ if(array_key_exists($moduleName, $menu))
            </div>
            
     </div>
+    
+<?php
+
+  if($BF->config->get('com.b2bfront.site.maintenance', true) == '1')
+  {
+  
+?> 
+    <div class="maintenance">
+      
+      <img src="/acp/static/icon/construction.png" class="middle" alt="Under Construction" />
+       &nbsp;
+      <strong>Maintenance mode</strong> &nbsp; - &nbsp;
+      The frontend is currently unavailable.
+      
+      <a href="/acp/?act=system&mode=config_maintenance_exit">Click here</a> to return to normal mode.
+    </div>
+  
+<?php
+  
+  }
+
+?>  
+    
     <div class="menu">
       <ul class="menu">
 <?php
