@@ -226,8 +226,11 @@ $childOptions = array(
 );
 
 // Collect changes to child items
+// These are changes that will be applied to ALL child items
 $childChanges = array(
   'classification_id' => $BF->inInteger('f_classification'),
+  'category_id' => $BF->inInteger('f_category'),
+  'brand_id' => $BF->inInteger('f_brand'),
   'description' => stripslashes($BF->inUnfiltered('description'))
 );
 

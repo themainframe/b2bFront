@@ -647,14 +647,16 @@ if($isChild)
           <td class="key">
             <strong>Availability Date</strong><br />
             If this item is out of stock, this date will be displayed.<br />
-            <span class="grey">Leave blank to maintain current value, set to past date to hide.</span>
+            <span class="grey">Set to a date in the past to clear.</span>
           </td>
           <td class="value">
             <?php 
               print ($itemRow->stock_date > 0 ? '<span>Currently due: ' . 
                     date('d M Y', $itemRow->stock_date) . '</span><br /><br />' : '');
             ?>
-            <input id="f_stock_date" type="text" name="f_stock_date" class="date" style="width: 100px;" />
+            <input id="f_stock_date" type="text" name="f_stock_date"
+              value="<?php print $itemRow->stock_date > 0 ? date('d M Y', $itemRow->stock_date) : ''; ?>" 
+              class="date" style="width: 100px;" />
           </td>
         </tr>
 
