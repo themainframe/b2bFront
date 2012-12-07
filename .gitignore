@@ -4,7 +4,8 @@
 #
 
 .DS_Store
-thumbs.db
+[Tt]humbs.db
+
 
 #
 # Libraries, skins, temp/store locations
