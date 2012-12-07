@@ -20,6 +20,12 @@ errors
 catalogue
 
 #
+# Extensions
+#
+extensions/invoice_print_templates
+extensions/mail_templates
+
+#
 # Website-specific
 #
 robots.txt
