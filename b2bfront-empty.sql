@@ -406,7 +406,7 @@ VALUES
 	(50,'com.b2bfront.security.cron-staff-username','cron','cron','Cron staff username','The username of the staff user that automated scripts run as.','text',1,7,-1),
 	(49,'com.b2bfront.security.cron-staff-password','password','password','Cron staff password','The password of the staff user that automated scripts run as.','text',1,7,-1),
 	(48,'com.b2bfront.security.cron-token','Choose a secure string','Choose a secure string','Cron token','A token that Cron/Scheduled Tasks must pass to the software to run.','text',1,7,-1),
-	(51,'com.b2bfront.site.smart-tags','1','1','Smart view tags','Enable auto-commented template tags in the MVC system.<br />\nThis can improve page appearance while testing new models.','boolean',1,8,-1),
+	(51,'com.b2bfront.site.smart-tags','0','0','Smart view tags','Enable auto-commented template tags in the MVC system.<br />\nThis can improve page appearance while testing new models.','boolean',1,8,-1),
 	(52,'com.b2bfront.site.double-precision','2','2','Double number precision','The number of decimal places to use when displaying double precision numbers.<br />\nThis may be overridden in places.','integer',1,8,-1),
 	(53,'com.b2bfront.site.reveal-subviews','0','0','Reveal Subviews','Reveal subviews using green borders.<br />\nUseful for debugging views under development.','boolean',1,8,-1),
 	(54,'com.b2bfront.site.title','Your Company','Your Company','Website Title','The title of your website.  Generally your company name.','text',1,8,-1),
