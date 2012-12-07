@@ -92,6 +92,10 @@ if(!defined("BF_CONTEXT_ADMIN") || !defined("BF_CONTEXT_MODULE"))
                           array(
                             'dataName' => 'items',
                             'niceName' => 'Items',
+                            'options' => array(
+                              'formatAsLink' => true,
+                              'linkURL' => '/acp/?act=inventory&mode=browse&f_tag={id}&no_save_default_view=1'
+                            ),
                             'css' => array('width' => '100px')
                           ),
                           array(

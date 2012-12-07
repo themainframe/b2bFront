@@ -19,7 +19,7 @@ if(!defined("BF_CONTEXT_ADMIN") || !defined("BF_CONTEXT_MODULE"))
 $myAdminRow = $BF->db->getRow('bf_admins', $BF->admin->AID, 'id', true);
 
 // Check if a default is set
-if($BF->in('f_term') == '' && $BF->in('f_in') == '' && $BF->in('f_filter') == '')
+if($BF->in('f_term') == '' && $BF->in('f_in') == '' && $BF->in('f_filter') == '' && $BF->in('f_tag') == '')
 {    
   if($myAdminRow->inventory_default_view != '')
   {
@@ -32,6 +32,12 @@ if($BF->in('f_term') == '' && $BF->in('f_in') == '' && $BF->in('f_filter') == ''
 if($BF->in('f_label') == '')
 {
   $BF->setIn('f_label', '-1');
+}
+
+// Override tag display
+if($BF->in('f_tag') == '')
+{
+  $BF->setIn('f_tag', '-1');
 }
 
 // Force parent visibility
@@ -52,7 +58,8 @@ function getDefaultViewQS()
          $BF->inInteger('inventory_pg') . '&inventory_lpp=' .
          $BF->inInteger('inventory_lpp') . '&inventory_order_d=' . 
          $BF->in('inventory_order_d') . '&inventory_order=' . 
-         $BF->inInteger('inventory_order') . '&x_show_parents=' . 
+         $BF->inInteger('inventory_order') . '&f_tag=' . 
+         $BF->inInteger('f_tag') . '&x_show_parents=' . 
          $BF->in('x_show_parents') . '&f_classification=' . 
          $BF->in('f_classification') . '&f_label=' . 
          $BF->in('f_label') . '&f_brand=' . 
@@ -639,6 +646,35 @@ if(!$labelColours)
      
   $inventoryViewProfiler->stop('RENDERING_LABELS');
   
+  $inventoryViewProfiler->start('RENDERING_TAGS');
+
+  // Get all tag applications of current selection
+  $currentTagID = $BF->inInteger('f_tag');
+  
+  if($currentTagID != -1)
+  {    
+    // Find applications
+    $tagApplications = $BF->db->query();
+    $tagApplications->select('*', 'bf_item_tag_applications')
+                      ->where('`item_tag_id` = \'{1}\'', $currentTagID)
+                      ->execute();
+    
+    // Any items?
+    if($tagApplications->count > 0)
+    {  
+      $tagApplicationsHash = $tagApplications->getInHash('item_id');
+      
+      // Constrain search to items
+      $whereClauseFilter .= ' AND (`id` IN (' . $tagApplicationsHash . '))';
+    }
+    else
+    {
+      $whereClauseFilter .= ' AND 1=0';
+    }
+  }
+     
+  $inventoryViewProfiler->stop('RENDERING_TAGS');
+  
   // List safe fields to include
   $safeFields = array(
     'sku',
@@ -692,6 +728,7 @@ if(!$labelColours)
     $whereClause .= ' AND brand_id = {4} ';
     $brandID = $BF->inInteger('f_brand');
   }
+
   
   $inventoryViewProfiler->start('PRELOADING_TAGS');
   
