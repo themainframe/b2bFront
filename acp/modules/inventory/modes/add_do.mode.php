@@ -190,6 +190,15 @@ $BF->db->delete('bf_admin_drafts')
            ->execute();
 
 
+// Get stock due date
+$stockDate = strtotime($BF->in('f_stock_date'));
+
+// Past?
+if($stockDate < time())
+{
+  $stockDate = ' ';
+}
+
 // Passed validation
 $result = $BF->admin->api('Items')
                     ->add(
@@ -202,7 +211,7 @@ $result = $BF->admin->api('Items')
                            Tools::price($BF->in('f_rrp_price')),
                            $BF->in('f_stock_free'),
                            $BF->in('f_stock_held'),
-                           $BF->in('f_stock_date'),
+                           $stockDate,
                            Tools::price($BF->in('f_cost_price')),
                            $BF->in('f_barcode'),
                            stripslashes($BF->inUnfiltered('description')),
