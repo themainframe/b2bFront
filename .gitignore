@@ -3,6 +3,9 @@
 # Excludes installation-specific clutter from the repo
 #
 
+.DS_Store
+thumbs.db
+
 #
 # Libraries, skins, temp/store locations
 #
