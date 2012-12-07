@@ -88,9 +88,8 @@ class Dealers extends API
   public function modify($id, $name, $password, $email, $description, $profileID, 
                          $accountNumber, $addressBuilding, $addressStreet, $addressCity,
                          $addressPostcode, $phoneLandline, $phoneMobile, $URL,
-                         $tagline, $localeID, $exludeBulk, $discountBandID, $inDirectory)
+                         $tagline, $localeID, $excludeBulk, $discountBandID, $inDirectory)
   {
-
     // Build changes array
     $changes = array(
       'name' => $name,
