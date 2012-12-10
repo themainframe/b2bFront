@@ -393,7 +393,7 @@ VALUES
 	(32,'com.b2bfront.rackspace.container','Container Name','Container Name','Container Name','The name of the container into which files will be uploaded.','text',1,5,-1),
 	(34,'com.b2bfront.images.temp','/temp/','/temp/','Temporary directory','The location relative to the root directory into which images are held on a temporary basis.','text',1,6,-1),
 	(36,'com.b2bfront.security.url-session-ids','1','1','URL-passed session IDs','Allow Session IDs to be passed in the Query String.','boolean',1,7,-1),
-	(37,'com.b2bfront.site.url','http://www.coyote-sports.com/','http://www.coyote-sports.com/','Website URL','The full URL of the website with a trailing forward slash. ','text',1,8,-1),
+	(37,'com.b2bfront.site.url','http://localhost/','http://localhost/','Website URL','The full URL of the website with a trailing forward slash. ','text',1,8,-1),
 	(38,'com.b2bfront.sms.username','Username','Username','Mediaburst API Username','The username of the Mediaburst SMS API account to log in with.','text',1,10,-1),
 	(39,'com.b2bfront.sms.password','Password','Password','Mediaburst API Password','The password of the Mediaburst SMS API to log in with.','text',1,10,-1),
 	(40,'com.b2bfront.sms.origin','b2bFront','b2bFront','SMS Origin','An origin name between 1 and 11 characters in length used for SMS messages.<br />\nThis is where SMS messages will appear to be sent from.','text',1,10,-1),
