@@ -160,7 +160,6 @@ if(array_key_exists($moduleName, $menu))
 
 ?>
     <script type="text/javascript" src="static/js/admin.js"></script>
-    <script type="text/javascript" src="static/js/admin_demo.js"></script>
 <?php
 		  
 		  // Load scripts for a module
