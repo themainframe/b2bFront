@@ -16,7 +16,7 @@ if(!defined("BF_CONTEXT_ADMIN"))
 }
 
 // Define the root path of the application
-$_ROOT = '/var/www/';
+$_ROOT = __DIR__ . '../';
 
 //
 // No more configuration beyond this point
