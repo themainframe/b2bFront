@@ -186,7 +186,7 @@ $row = $BF->db->next();
 ?>
 
             &nbsp;
-            <a href="http://127.0.0.1/acp/?act=dealers&mode=matrix" class="new" target="_blank">Modify Band</a>
+            <a href="./?act=dealers&mode=matrix" class="new" target="_blank">Modify Band</a>
 
           </td>
         </tr>        
