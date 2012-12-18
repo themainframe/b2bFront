@@ -48,10 +48,15 @@ if($itemsCount == 0)
   exit();
 }
 
-// Start the items specified
+// Remove the items specified
 $BF->db->delete('bf_items')
        ->where('id IN ({1})', Tools::CSV($itemsArray))
        ->limit($itemsCount)
+       ->execute();
+
+// Remove any attribute data
+$BF->db->delete('bf_parent_item_variation_data')
+       ->where('item_id IN ({1})', Tools::CSV($itemsArray))
        ->execute();
 
 $BF->admin->notifyMe('OK', 'The selected items have been removed.');
