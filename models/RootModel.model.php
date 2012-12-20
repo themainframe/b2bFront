@@ -343,7 +343,18 @@ class RootModel extends Model implements IModel
                               : array())
                             
                            );
-    
+   
+    // Add firefox hack
+    $browser = get_browser(null, true);
+    if($browser['browser'] == 'Firefox')
+    {
+      $this->addValue('ffSocialFix', '; width: 100%; position:relative; left: -880px; top: 20px');   
+    }
+    else
+    {
+      $this->addValue('ffSocialFix', '');
+    }
+ 
     // By default no plugin scripts
     $this->addValue('pluginScriptHook', '');
     
