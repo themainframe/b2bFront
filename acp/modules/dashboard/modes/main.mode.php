@@ -61,7 +61,7 @@ function activityGraphData()
   function didLogin()
   {
     // Prompt for login to livechat
-    doChatLogin = confirmation('Welcome.<br /><br />Would you like to go online for IM chat?', 
+    doChatLogin = confirmation('Would you like to go online for IM chat?', 
       function() {
 
         // Go online
