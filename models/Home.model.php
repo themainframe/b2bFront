@@ -18,6 +18,7 @@ class Home extends RootModel
     parent::execute();
   
     // Get masthead images
+    $this->addValue('showMastheadItems', 1);    
     $this->addValue('masthead-items', $this->getMastheadItems());
     
     // Set this model's preferences
