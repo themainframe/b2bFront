@@ -18,24 +18,6 @@ if(!defined("BF_CONTEXT_ADMIN"))
 global $BF;
 
 /**
- * Login just happened
- * @return boolean
- */
-function didLogin()
-{
-  // Prompt for login to livechat
-  doChatLogin = confirmation('Welcome.<br /><br />Would you like to go online for IM chat?', 
-    function() {
-
-      // Go online
-      switchOnlineOffline();
-
-    });
-
-  return true;
-}
-
-/**
  * Generate an activity graph for the past 24 hours using CCTV data
  * @return string
  */
@@ -71,7 +53,24 @@ function activityGraphData()
 ?>
 
 <script type="text/javascript">
-  
+    
+  /**
+   * Login just happened
+   * @return boolean
+   */
+  function didLogin()
+  {
+    // Prompt for login to livechat
+    doChatLogin = confirmation('Welcome.<br /><br />Would you like to go online for IM chat?', 
+      function() {
+
+        // Go online
+        switchOnlineOffline();
+
+      });
+
+    return true;
+  }
 
   $(function()
   {
