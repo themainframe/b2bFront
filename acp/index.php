@@ -119,7 +119,7 @@ if(array_key_exists($moduleName, $menu))
 		  // Load the stylesheet for a module if it exists
 		  if(Tools::exists('/acp/modules/' . $moduleName . '/style.css'))
 		  {
-		    print '    <link rel="stylesheet" type="text/css" href="' . '/acp/modules/' . $moduleName . '/style.css' . '" />';
+		    print '    <link rel="stylesheet" type="text/css" href="' . 'modules/' . $moduleName . '/style.css' . '" />';
 		  }
 		  
 ?>
