@@ -22,7 +22,7 @@ div.cmessage {
   border-bottom: 1px solid #efefef;
   padding: 6px;
   font-size: 9pt;
-  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom;
+  background: url(../image/aui-subbar.png) repeat-x bottom;
   background-origin: border-box;
   background-clip: padding-box;
 }
@@ -54,7 +54,7 @@ div.cmessage div.contents {
 }
 
 div.d-alert {
-  background: url(/acp/static/image/aui-alert-background.png) repeat-x !important;
+  background: url(../image/aui-alert-background.png) repeat-x !important;
   color: #fff;
 }
 
@@ -67,21 +67,21 @@ div.meta {
 div.dealer {
   border-bottom: 1px solid #efefef;
   padding: 8px;
-  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom;
+  background: url(../image/aui-subbar.png) repeat-x bottom;
   background-origin: border-box;
   background-clip: padding-box;
   border-bottom: 1px solid #afafaf;
 }
 
 div.mystatus {
-  background: url(/acp/static/image/aui-subbar.png) repeat-x bottom !important;
+  background: url(../image/aui-subbar.png) repeat-x bottom !important;
   background-origin: border-box  !important;
   background-clip: padding-box  !important;
   cursor: pointer;
 }
 
 #dealers-list div.selected {
-  background-image: url(/acp/static/icon/phone-start.png); 
+  background-image: url(../icon/phone-start.png); 
   background-repeat: no-repeat;
   background-position: 174px 9px;
 }
@@ -98,27 +98,27 @@ div.d-status {
   height: 16px;
   line-height: 16px;
   background-repeat: no-repeat;
-  background-image: url(/acp/static/icon/status-offline.png);
+  background-image: url(../icon/status-offline.png);
 }
 
 div.d-online {
-  background-image: url(/acp/static/icon/status.png);
+  background-image: url(../icon/status.png);
 }
 
 div.d-busy {
-  background-image: url(/acp/static/icon/tick-red.png) !important;
+  background-image: url(../icon/tick-red.png) !important;
 }
 
 div.dealer div.buttons div.call {
   width: 16px;
   height: 16px;
-  background: url(/acp/static/icon/phone-start.png);
+  background: url(../icon/phone-start.png);
   cursor: pointer;
 }
 
 div.taken {
   color: #7d7d7d;
-  background: url(/acp/static/image/aui-menu-back.png) repeat-x !important;
+  background: url(../image/aui-menu-back.png) repeat-x !important;
 }
 
 div.d-overlay {
@@ -145,11 +145,11 @@ div.quick_search {
 div.quick_search_box {
   width: 200px;
   height: 26px;
-  background: url(/acp/static/image/aui-quick-search.png) no-repeat;
+  background: url(../image/aui-quick-search.png) no-repeat;
 }
 
 div.quick_search_box:hover {
-  background: url(/acp/static/image/aui-quick-search-hover.png) no-repeat;
+  background: url(../image/aui-quick-search-hover.png) no-repeat;
 }
 
 div.quick_search_selected {
@@ -185,7 +185,7 @@ div.notification_log p {
 
 div.quickGoTitle {
   text-shadow: 1px 1px 1px white;
-  background: url(/acp/static/image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
+  background: url(../image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
   padding: 6px 0px 9px 10px;
   font-weight: bold;
   color: #757575;
@@ -218,7 +218,7 @@ h3 {
 
 div.header {
   padding: 10px;
-  background: url(/acp/static/image/aui-b2b-logo.png) no-repeat 13px 11px #fff;
+  background: url(../image/aui-b2b-logo.png) no-repeat 13px 11px #fff;
   height: 30px;
 }
 
@@ -269,7 +269,7 @@ div.menu {
   border-top-width: 1px;
   border-color: #a2a2a2;
   border-style: solid;
-  background: url(/acp/static/image/aui-menu-back.png);
+  background: url(../image/aui-menu-back.png);
   height: 34px;
   font-size: 9pt;
   overflow: hidden;
@@ -354,7 +354,7 @@ ul.menu li {
 	border-bottom-width: 1px;
 	border-bottom-color: #a2a2a2;
 	float: left;
-	background-image: url(/acp/static/image/aui-menu-item.png);
+	background-image: url(../image/aui-menu-item.png);
 	margin: 0px;
 	padding: 10px;
 	display: inline;
@@ -370,7 +370,7 @@ ul.menu li {
 }
 
 ul.menu li:hover {
-	background-image: url(/acp/static/image/aui-menu-hover.png);
+	background-image: url(../image/aui-menu-hover.png);
 }
 
 ul.menu li a {
@@ -382,16 +382,16 @@ ul.menu li a {
   padding-bottom: 2px;
 }
 
-ul.menu li a.dashboard { background-image: url(/acp/static/icon/dashboard.png); }
-ul.menu li a.inventory { background-image: url(/acp/static/icon/box.png); }
-ul.menu li a.dealers { background-image: url(/acp/static/icon/user-business.png); }
-ul.menu li a.images { background-image: url(/acp/static/icon/images.png); }
-ul.menu li a.website { background-image: url(/acp/static/icon/website-coy-blue.png); }
-ul.menu li a.logout { background-image: url(/acp/static/icon/cross-circle.png); }
-ul.menu li a.orders { background-image: url(/acp/static/icon/money-coin.png); }
-ul.menu li a.data { background-image: url(/acp/static/icon/table.png); }
-ul.menu li a.statistics { background-image: url(/acp/static/icon/chart-up-color.png); }
-ul.menu li a.system { background-image: url(/acp/static/icon/gear.png); }
+ul.menu li a.dashboard { background-image: url(../icon/dashboard.png); }
+ul.menu li a.inventory { background-image: url(../icon/box.png); }
+ul.menu li a.dealers { background-image: url(../icon/user-business.png); }
+ul.menu li a.images { background-image: url(../icon/images.png); }
+ul.menu li a.website { background-image: url(../icon/website-coy-blue.png); }
+ul.menu li a.logout { background-image: url(../icon/cross-circle.png); }
+ul.menu li a.orders { background-image: url(../icon/money-coin.png); }
+ul.menu li a.data { background-image: url(../icon/table.png); }
+ul.menu li a.statistics { background-image: url(../icon/chart-up-color.png); }
+ul.menu li a.system { background-image: url(../icon/gear.png); }
 
 /**
  * Chat message link button
@@ -399,14 +399,14 @@ ul.menu li a.system { background-image: url(/acp/static/icon/gear.png); }
 ul.menu li a.messages-menu {
   padding: 15px;
   background-position: 1px 5px;
-  background-image: url(/acp/static/image/aui-chat-online.png) !important;
+  background-image: url(../image/aui-chat-online.png) !important;
 }
 ul.menu li a.messages-animate {
   background-position: 0px 4px !important;
-  background-image: url(/acp/static/image/aui-incoming.gif) !important;
+  background-image: url(../image/aui-incoming.gif) !important;
 }
 ul.menu li a.messages-offline {
-  background-image: url(/acp/static/image/aui-chat-offline.png) !important;
+  background-image: url(../image/aui-chat-offline.png) !important;
 }
 
 
@@ -420,7 +420,7 @@ div.sub_bar {
   background-position: 0 bottom; 
   height: 32px; 
   background-repeat: repeat-x;
-  background-image: url(/acp/static/image/aui-subbar.png);
+  background-image: url(../image/aui-subbar.png);
   overflow: hidden;
 }
 
@@ -428,7 +428,7 @@ a.new {
   background-repeat: no-repeat;
   background-position: right;
   padding-right: 14px;
-  background-image: url(/acp/static/image/aui-external.png);
+  background-image: url(../image/aui-external.png);
 }
 
 a:visited {

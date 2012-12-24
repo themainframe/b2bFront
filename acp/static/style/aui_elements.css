@@ -9,7 +9,7 @@ div.panel {
 
 div.panel div.title {
   text-shadow: 1px 1px 1px white;
-  background: url(/acp/static/image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
+  background: url(../image/aui-menu-item.png) #dfdfdf 0px -5px repeat-x;
   padding: 6px 0px 9px 10px;
   font-weight: bold;
   color: #757575;
@@ -31,12 +31,12 @@ div.panel div.contents p {
 div.panel div.message {
   padding: 15px;
   border-bottom: 1px solid #a2a2a2;
-  background: url(/acp/static/image/aui-message-stripe.png);
+  background: url(../image/aui-message-stripe.png);
 }
 
 div.no_data {
   padding: 20px;
-  background: url(/acp/static/image/aui-message-stripe.png);
+  background: url(../image/aui-message-stripe.png);
   text-align: center;
   font-weight: bold;
   color: #a2a2a2;
@@ -47,11 +47,11 @@ div.no_data {
 div.panel div.warning {
   padding: 15px;
   border-bottom: 1px solid #a2a2a2;
-  background: url(/acp/static/image/aui-warning-stripe.png);
+  background: url(../image/aui-warning-stripe.png);
 }
 
 .gradient {
-  background: #ececec url(/acp/static/image/aui-gradient.png) repeat-x;
+  background: #ececec url(../image/aui-gradient.png) repeat-x;
   border-bottom: 1px solid #a2a2a2;
 }
 
@@ -94,7 +94,7 @@ div.iconpicker img {
   padding: 3px;
   border: 1px solid #cfcfcf;
   margin: 2px;
-  background: url(/acp/static/image/aui-menu-item.png);
+  background: url(../image/aui-menu-item.png);
 }
 
 div.iconpicker img:hover {
@@ -108,7 +108,7 @@ div.iconpicker img.selected {
 }
 
 div.maintenance {
-  background: url(/acp/static/image/aui-warning-stripe.png);
+  background: url(../image/aui-warning-stripe.png);
   height: 25px;
   border-top: 1px solid #a2a2a2;
   font-size: 9pt;
@@ -126,7 +126,7 @@ table.data {
 }
 
 table.data thead tr.header {
-  background: url(/acp/static/image/aui-menu-item.png)  #dfdfdf 0px -5px repeat-x;
+  background: url(../image/aui-menu-item.png)  #dfdfdf 0px -5px repeat-x;
   height: 30px;
   border-bottom: 1px solid #a2a2a2;
 }
@@ -146,11 +146,11 @@ table.data thead tr td a {
 }
 
 table.data thead tr td a.desc {
-  background: url(/acp/static/image/aui-descending.png) transparent right bottom no-repeat;
+  background: url(../image/aui-descending.png) transparent right bottom no-repeat;
 }
 
 table.data thead tr td a.asc {
-  background: url(/acp/static/image/aui-ascending.png) transparent right bottom no-repeat;
+  background: url(../image/aui-ascending.png) transparent right bottom no-repeat;
 }
 
 table.data tbody tr {
@@ -186,7 +186,7 @@ span.editable {
     padding: 1px;
   display: block;
   height: 12px;
-  cursor: url(/acp/static/image/aui-sheet.cur), default;
+  cursor: url(../image/aui-sheet.cur), default;
 }
 
 span.editable:hover {
@@ -260,14 +260,14 @@ a.tool {
   font-size: 7pt;
   cursor: pointer;
   margin: 0px 3px 1px 0px;
-  background: url(/acp/static/image/aui-button.png) repeat-x;
+  background: url(../image/aui-button.png) repeat-x;
   border: 1px solid #c2c2c2;
   padding: 2px 6px 3px 2px;
   vertical-align: middle;
 }
 
 a.tool:hover {
-  background: url(/acp/static/image/aui-menu-back.png) 0px -15px repeat-x;
+  background: url(../image/aui-menu-back.png) 0px -15px repeat-x;
 }
 
 /**
@@ -276,7 +276,7 @@ a.tool:hover {
 
 div.pager {
   border: 1px solid #a2a2a2;
-  background: url(/acp/static/image/aui-gradient.png) center center repeat-x;
+  background: url(../image/aui-gradient.png) center center repeat-x;
 }
 
 div.pager table tbody tr td {
@@ -294,7 +294,7 @@ div.pager table tbody tr td.right {
 
 div.pager td.page {
   border-right: 1px solid #a2a2a2;
-  background: url(/acp/static/image/aui-menu-item.png) transparent 0px -5px repeat-x;
+  background: url(../image/aui-menu-item.png) transparent 0px -5px repeat-x;
   width: 10px;
   text-align: center;
   border-top: 1px solid transparent;
@@ -321,7 +321,7 @@ div.pager td.page a {
 }
 
 div.pager td.current {
-  background: url(/acp/static/image/aui-menu-back.png) transparent 0px -5px repeat-x;
+  background: url(../image/aui-menu-back.png) transparent 0px -5px repeat-x;
   border-top: 1px solid #9f9f9f;
   border-bottom: 1px solid #9f9f9f;
 }
@@ -332,19 +332,19 @@ div.pager td div.icon {
 }
 
 div.pager td a.first {
-  background: url(/acp/static/image/aui-leftleft.png) scroll no-repeat center center;
+  background: url(../image/aui-leftleft.png) scroll no-repeat center center;
 }
 
 div.pager td a.back {
-  background: url(/acp/static/image/aui-left.png) scroll no-repeat center center;
+  background: url(../image/aui-left.png) scroll no-repeat center center;
 }
 
 div.pager td a.forward {
-  background: url(/acp/static/image/aui-right.png) scroll no-repeat center center;
+  background: url(../image/aui-right.png) scroll no-repeat center center;
 }
 
 div.pager td a.last {
-  background: url(/acp/static/image/aui-rightright.png) scroll no-repeat center center;
+  background: url(../image/aui-rightright.png) scroll no-repeat center center;
 }
 
 /**
@@ -352,7 +352,7 @@ div.pager td a.last {
  */
  
 input.submit {
-  background: url(/acp/static/image/aui-button.png) repeat-x;
+  background: url(../image/aui-button.png) repeat-x;
   color: #000;
   font-weight: bold;
   padding: 4px 9px 4px 9px;
@@ -360,17 +360,17 @@ input.submit {
 }
  
 input.ok {
-  background: url(/acp/static/image/aui-button-ok.png) repeat-x;
+  background: url(../image/aui-button-ok.png) repeat-x;
   color: #fff;  
 }
 
 input.bad {
-  background: url(/acp/static/image/aui-button-bad.png) repeat-x;
+  background: url(../image/aui-button-bad.png) repeat-x;
   color: #fff;  
 }
 
 span.button {
-  background: url(/acp/static/image/aui-button.png) repeat-x;
+  background: url(../image/aui-button.png) repeat-x;
   color: #000;
   font-weight: bold;
   padding: 5px 10px 5px 10px;
@@ -380,7 +380,7 @@ span.button {
 }
 
 .bad {
-  background: url(/acp/static/image/aui-button-bad.png) repeat-x !important;
+  background: url(../image/aui-button-bad.png) repeat-x !important;
   color: #fff !important;  
 }
 
@@ -402,7 +402,7 @@ span.error_message {
 }
 
 .error {
-  background: url(/acp/static/image/aui-warning-stripe.png);
+  background: url(../image/aui-warning-stripe.png);
 }
 
 div.formlistbuilder table tr td {
@@ -415,11 +415,11 @@ div.formlistbuilder table tr td input {
 
 span.checkmark {
   padding: 1px 8px 8px 8px;
-  background: url(/acp/static/icon/tick-button-no.png) no-repeat;
+  background: url(../icon/tick-button-no.png) no-repeat;
 }
 
 span.yes {
-  background-image: url(/acp/static/icon/tick-button.png)
+  background-image: url(../icon/tick-button.png)
 }
 
 input[type=file]
