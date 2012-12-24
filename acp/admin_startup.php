@@ -8,7 +8,7 @@
  * @version 1.0
  * @author Damien Walsh
  */
- 
+
 // Context check
 if(!defined("BF_CONTEXT_ADMIN"))
 {
@@ -16,7 +16,7 @@ if(!defined("BF_CONTEXT_ADMIN"))
 }
 
 // Define the root path of the application
-$_ROOT = __DIR__ . '../';
+$_ROOT = __DIR__ . '/../';
 
 //
 // No more configuration beyond this point
