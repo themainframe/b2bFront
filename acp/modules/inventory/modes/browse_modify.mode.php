@@ -249,12 +249,12 @@ if($isChild)
     
     // Start image uploader (Uploadify)				
 	  $('#f_image').uploadify({
-      'uploader'  : '/acp/js_libs/jquery_uploadify/uploadify.swf',
-      'script'    : '/acp/ajax/uploadify.ajax.php?sku=' + $('#f_sku').val(),
-      'cancelImg' : '/acp/static/icon/cross-circle.png',
+      'uploader'  : 'js_libs/jquery_uploadify/uploadify.swf',
+      'script'    : 'ajax/uploadify.ajax.php?sku=' + $('#f_sku').val(),
+      'cancelImg' : 'static/icon/cross-circle.png',
       'folder'    : '/uploads',
       'removeCompleted' : true,
-      'buttonImg' : '/acp/static/image/aui-add-image.png',
+      'buttonImg' : 'static/image/aui-add-image.png',
       'width'		: '211',
 	    'height'	: '32',
 	    'auto' : true,
