@@ -49,6 +49,9 @@ class Data extends API
    */
   public function canImport($path)
   {
+    // This could take time... 5 Minutes max execution time.
+    set_time_limit(60 * 5);
+
     // Test for initiated class
     if(!$this->initiated)
     {
@@ -154,6 +157,9 @@ class Data extends API
    */
   public function import($path, $createNewRows, $createResultRows = false)
   {
+    // This could take time... 5 Minutes max execution time.
+    set_time_limit(60 * 5);
+
     // Parse the file, first check it can be imported
     if($this->canImport($path) !== true)
     {
