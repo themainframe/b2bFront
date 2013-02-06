@@ -182,13 +182,21 @@ class Email extends Base
    */
   public function send()
   {
+    // Count mail
+    $mailSent = 0;
+
     // Send the mail
     foreach($this->recipients as $recipient)
     {
       mail($recipient->address, $this->replaceTokens($this->subject), 
         $this->replaceTokens($this->text, $recipient->mergeValues), $this->renderHeaders());
+    
+      $mailSent ++;
     }
     
+    // Increment stats
+    $this->parent->stats->increment('com.b2bfront.stats.website.emails-sent', $mailSent);
+
     return true;
   } 
   
@@ -204,10 +212,13 @@ class Email extends Base
     {
       mail($recipient->address, $this->replaceTokens($this->subject), 
         $this->replaceTokens($this->text, $recipient->mergeValues), $this->renderHeaders());
-        
+      
+      // Increment stats
+      $this->parent->stats->increment('com.b2bfront.stats.website.emails-sent', 1);
+
       sleep($wait);
     }
-    
+
     return true;
   } 
   
