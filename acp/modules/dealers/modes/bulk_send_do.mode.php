@@ -142,7 +142,7 @@ file_put_contents($storePath, $email->getText());
 Tools::nonBlockingMode();
 
 // Send mail
-$email->sendSleep(2);
+$email->sendSleep(1);
 
 // Send a notification to say the sending has finished
 $BF->admin->notifyMe('Bulk Email Sending Finished', 
