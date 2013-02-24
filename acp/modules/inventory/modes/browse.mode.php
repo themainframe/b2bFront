@@ -811,14 +811,14 @@ if(!$labelColours)
   
   // Create a query
   $query = $BF->db->query();
-  $query->select('0 AS is_parent, id, sku, name, trade_price, pro_net_price, pro_net_qty,' . 
+  $query->select('0 AS is_parent, id, sku, name, barcode, trade_price, pro_net_price, pro_net_qty,' . 
                  'rrp_price, cost_price ,wholesale_price, stock_free, visible, parent_item_id', 'bf_items')
         ->where($whereClause . $whereClauseFilter, $whereClauseValue, $categoryID, $classificationID, $brandID);
         
   // Show parents?
   if($BF->in('x_show_parents') && $BF->in('f_filter') == '-1')
   {
-    $query->text('UNION SELECT 1 AS is_parent, id, sku, name, trade_price, pro_net_price,' .
+    $query->text('UNION SELECT 1 AS is_parent, id, sku, name, "" AS barcode, trade_price, pro_net_price,' .
                'pro_net_qty, rrp_price, cost_price, wholesale_price, 0, 1, -1 FROM `bf_parent_items`')
           ->where($whereClause . $whereClauseFilter, $whereClauseValue, $categoryID, $classificationID, $brandID);
   }
@@ -966,6 +966,15 @@ if(!$labelColours)
                             'css' => array(
                                        'overflow' => 'hidden'
                                      )
+                          ),
+                          array(
+                            'dataName' => 'barcode',
+                            'niceName' => 'Barcode',
+                            'options' => array(
+                                           'editable' => true,
+                                           'editableTable' => 'bf_items'
+                                         ),
+                            'css' => array('width' => '85px')
                           ),
                           array(
                             'dataName' => 'trade_price',
