@@ -81,7 +81,16 @@ class BOMItem extends BOMObject
     // Store each
     while($image = $images->next())
     {
-      $this->images[$priorities[$image->id]] = $image;
+      $nextPriority = $priorities[$image->id];
+
+      // Find the next free priority slot
+      while($this->images[$nextPriority])
+      {
+        $nextPriority ++;
+      }
+
+      // Add
+      $this->images[$nextPriority] = $image;
     }
     
     ksort($this->images);
