@@ -37,7 +37,8 @@ class StockDownload extends RootModel
       'Trade Price',
       'My Price',
       'RRP',
-      'Stock'
+      'Stock',
+      'Barcode'
     );
     
     $dataColumns = array(
@@ -45,7 +46,8 @@ class StockDownload extends RootModel
       'trade_price',
       'my_price_not_column',
       'rrp_price',
-      'stock_free_not_column'
+      'stock_free_not_column',
+      'barcode'
     );
     
     $this->addValue('columns', $supportedColumns);
@@ -185,7 +187,10 @@ class StockDownload extends RootModel
             $value = $row->{$dataColumns[$columnIndex]};
           }
         
-          $outputSheet->setCellValueByColumnAndRow($columnIndex + 1, $rowIndex, $value);
+
+          $type = PHPExcel_Cell_DataType::TYPE_STRING;
+          $outputSheet->getCellByColumnAndRow($columnIndex + 1, $rowIndex)->setValueExplicit($value, $type);
+          
           $totalColumns ++;
         }
         
