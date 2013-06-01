@@ -125,8 +125,7 @@ function activityGraphData()
         
         'error' : function(a, b) {
           
-          showMessage('Sorry - the issue could not be created.<br />Please contact Transcend.',
-            function() { });
+          notify('Error', 'Sorry - the issue could not be created.<br />Please contact Transcend.', 'cross-circle.png');
           hideLoadingScreen();
           
         },
@@ -147,7 +146,7 @@ function activityGraphData()
         
         // Show confirmation
         hideLoadingScreen();
-        showMessage('Thank you<br />The issue has been created.', function() { });
+        notify('Done', 'Thank you<br />The issue has been created.', 'information.png');
       },
       
       'type': 'POST'

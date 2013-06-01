@@ -60,6 +60,7 @@ function createIssue($title, $body, $label)
 	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($input));
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl, CURLOPT_HEADER, 1);
+  curl_setopt($curl,CURLOPT_USERAGENT,'PHP/Curl');
 
 	// SSL
 	curl_setopt($curl, CURLOPT_SSLVERSION,3); 
@@ -68,10 +69,12 @@ function createIssue($title, $body, $label)
 
 	// HTTP Basic Auth - ugh
 	curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-	curl_setopt($curl, CURLOPT_USERPWD, "avocetsports:warehouse32"); 
+	curl_setopt($curl, CURLOPT_USERPWD, "avocetsports:warehousing16"); 
 
 	// Execute
 	$result = curl_exec($curl);
+
+  print $result;
 
 	// Close
 	curl_close($curl);
@@ -91,9 +94,6 @@ if(empty($title))
 {
   exit();
 }
-
-// Dump data
-print_r($_POST);
 
 // Create
 createIssue($title, $body, $label);
