@@ -162,6 +162,15 @@ class Item extends RootModel
       $this->addValue('dueDateAvailable', 1);
       $this->addValue('dueDate', date('d/m/Y', $item->stock_date));
     }
+  
+    // Catalogue page
+    if($item->paper_catalogue_page != '')
+    {
+      // Show page
+      $this->addValue('paperPageAvailable', 1);
+      $this->addValue('paperPage', $item->paper_catalogue_page);
+    }
+    
     
     // Validate emptiness of properties
     $properties = array();
