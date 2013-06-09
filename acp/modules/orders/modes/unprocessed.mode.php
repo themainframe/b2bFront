@@ -87,12 +87,15 @@ if(!$BF->in('or1_order_d') && !$BF->in('or1_order'))
   $orders->setOption('defaultOrder', array('order_timestamp', 'desc'));
   
   $toolSet  = "\n";
+  $toolSet .= '<a class="tool" title="View" href="./?act=orders&mode=unprocessed_process&id={order_id}">' . "\n";
+  $toolSet .= '  <img src="/acp/static/icon/tick-circle.png" alt="View" />' . "\n";
+  $toolSet .= 'Process</a>' . "\n";
   $toolSet .= '<a target="_blank" class="tool" title="View" href="./?act=orders&mode=print&id={order_id}">' . "\n";
   $toolSet .= '  <img src="/acp/static/icon/printer.png" alt="Print Now" />' . "\n";
-  $toolSet .= 'Print Order</a>' . "\n";
+  $toolSet .= 'Print</a>' . "\n";
   $toolSet .= '<a class="tool" title="View" href="./?act=orders&mode=unprocessed_view&id={order_id}">' . "\n";
   $toolSet .= '  <img src="/acp/static/icon/magnifier.png" alt="View" />' . "\n";
-  $toolSet .= 'View Order</a>' . "\n";
+  $toolSet .= 'View</a>' . "\n";
   
   $orders->addColumns(array(
                           array(
@@ -153,7 +156,7 @@ if(!$BF->in('or1_order_d') && !$BF->in('or1_order'))
                                            'fixedOrder' => true
                                          ),
                             'css' => array(
-                                       'width' => '170px'
+                                       'width' => '175px'
                                      ),
                             'content' => $toolSet
                           )
