@@ -88,7 +88,8 @@ $output = array(
   'pro_net_qty' => $item->pro_net_qty,
   'basket' => $BF->cart->get($childItemID),
   'visible' => $item->visible,
-  'stock_date' => ($item->stock_date ? date('d/m/Y', $item->stock_date) : '')
+  'stock_date' => ($item->stock_date ? date('d/m/Y', $item->stock_date) : ''),
+  'paper_page' => $item->paper_catalogue_page ? $item->paper_catalogue_page : ''
 );
 
 // Output as JSON
