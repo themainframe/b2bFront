@@ -76,7 +76,7 @@ class Files extends API
     }
     
     // Should I set a TTL?
-    if($TTL)
+    if($TTL > 0)
     {
       // Set a TTL on this file
       $this->parent->setFileTTL($newLocation, $TTL);
