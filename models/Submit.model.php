@@ -139,6 +139,9 @@ class Submit extends RootModel
         </table>
       ';
       
+      
+
+            
       // Add total to statistics
       $this->parent->stats->increment('com.b2bfront.stats.financial.total-gross', $grossTotal);
       $this->parent->stats->increment('com.b2bfront.stats.financial.total-net', $netTotal);
@@ -198,6 +201,108 @@ class Submit extends RootModel
                                  ))
                          ->execute();
       }
+      
+      
+      // --------------------------------------------------
+      // Generate email for users
+      // --------------------------------------------------
+      // HTML Table for User
+      $userTable = '<table width="100%" style="width: 100%;">
+        <thead>
+          <tr>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 30px;" width="30">#</td>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 100px;" width="100">SKU</td>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 250px;" width="250">Name</td>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 90px;" width="90">Each</td>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 90px;" width="90">Qty</td>
+            <td style="padding: 3px; font-weight: bold; background: #dfdfdf; width: 90px;" width="90">Subtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+      ';
+              
+      // Copy in to order
+      $index = 0;
+      $basketItems->rewind();
+      
+      while($basketItem = $basketItems->next())
+      {
+        $index ++;
+                         
+        // Get item
+        $item = $this->parent->db->getRow('bf_items', $basketItem->itemid);
+                         
+        // Tally total
+        $subTotal = $pricer->subtotal($basketItem, $basketItem->quantity);
+        $grossTotal += $subTotal;
+        $netTotal += $subTotal - ($basketItem->cost_price * $basketItem->quantity);
+
+                         
+        // Add to HTML table
+        $userTable .= '      
+            <tr>
+              <td>' . $index . '</td>
+              <td>' . $item->sku . '</td>
+              <td>' . $item->name . '</td>
+              <td>' . $pricer->each($basketItem, $basketItem->quantity) . '</td>
+              <td>' . $basketItem->quantity . '</td>
+              <td>' . $pricer->subtotal($basketItem, $basketItem->quantity) . '</td>
+            </tr>
+        ';
+      }
+      
+      // Finish table
+      $userTable .= '
+          </tbody>
+        </table>
+      ';
+      
+      // Mail the user table to the user
+      // Build an email
+      $templateName = $this->parent->config->get('com.b2bfront.mail.default-template', true);
+      $XMLfile = BF_ROOT . '/extensions/mail_templates/' . $templateName . '/template.xml';
+      
+      // Load XML
+      $XMLdata = simplexml_load_file($XMLfile);
+      $templateTitle = (string)$XMLdata->description;
+      $templateContentName = (string)$XMLdata->content;
+      
+      // Build path
+      $contentPath = BF_ROOT . '/extensions/mail_templates/' . $templateName . 
+        '/' . $templateContentName;
+        
+      // Create email object
+      $email = new Email(& $this->parent);
+      $email->loadFromFile($contentPath);
+      
+      // Add recipient
+      $email->addRecipient($this->parent->security->attributes['email'], $this->parent->security->attributes);
+      
+      // Set subject
+      $subject = 'Order submitted: PN' . $orderID;
+      $email->setSubject($subject);
+      
+      // Build content
+      $content  = 'Hello,<br /><br />' . "\n";
+      $content .= 'This is a notification that your order (PN' . $orderID . ') has been received. <br /><br /><br />' . "\n";
+      $content .= $userTable;
+      $content .= '<br /><br /><br />';
+      $content .= 'You can log in to your account and visit the <strong>Account -> Orders</strong> section to review this order and attach further notes.<br /><br /><br />Thank you for your business!<br />- ' . $this->parent->config->get('com.b2bfront.site.title', true) . '';
+      
+      // Set template values
+      $email->assign(array(
+        'date' => Tools::longDate(),
+        'title' => $subject,
+        'content' => $content,
+        'url' => $this->parent->config->get('com.b2bfront.site.url', true) 
+      ));
+      
+      // Set from address and name
+      $email->from = $this->parent->config->get('com.b2bfront.mail.from-auto-address', true);
+      $email->fromName = $this->parent->config->get('com.b2bfront.mail.from-auto', true);
+      
+      // Send
+      $email->send();
       
       // Clear basket
       $this->parent->cart->clear();
