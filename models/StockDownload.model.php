@@ -38,7 +38,8 @@ class StockDownload extends RootModel
       'My Price',
       'RRP',
       'Stock',
-      'Barcode'
+      'Barcode',
+      'Description'
     );
     
     $dataColumns = array(
@@ -47,7 +48,8 @@ class StockDownload extends RootModel
       'my_price_not_column',
       'rrp_price',
       'stock_free_not_column',
-      'barcode'
+      'barcode',
+      'description'
     );
     
     $this->addValue('columns', $supportedColumns);
