@@ -77,6 +77,39 @@ if(!defined("BF_CONTEXT_ADMIN") || !defined("BF_CONTEXT_MODULE"))
                                    'width' => '160px'
                                  )
                       ),
+                      
+                      array(
+                        'dataName' => 'is_on_avocet',
+                        'niceName' => 'Avocet',
+                        'options' => array(
+                                       'editable_cb' => true,
+                                       'editable' => true,
+                                       'editableTable' => 'bf_downloads'
+                                     ),
+                        'css' => array('width' => '80px', 'text-align' => 'center')
+                      ),
+                      array(
+                        'dataName' => 'is_on_viking',
+                        'niceName' => 'Viking',
+                        'options' => array(
+                                       'editable_cb' => true,
+                                       'editable' => true,
+                                       'editableTable' => 'bf_downloads'
+                                     ),
+                        'css' => array('width' => '80px', 'text-align' => 'center')
+                      ),
+                      array(
+                        'dataName' => 'is_on_coyote',
+                        'niceName' => 'B2B',
+                        'options' => array(
+                                       'editable_cb' => true,
+                                       'editable' => true,
+                                       'editableTable' => 'bf_downloads'
+                                     ),
+                        'css' => array('width' => '80px', 'text-align' => 'center')
+                      ),
+                      
+                      
                       array(
                         'dataName' => '',
                         'niceName' => 'Actions',

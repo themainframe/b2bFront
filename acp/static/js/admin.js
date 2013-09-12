@@ -404,6 +404,27 @@ function setUpUIControls()
   //
   // Editable Inits...
   //
+  
+  $('span.editable input[type="checkbox"]').click(function() {
+    
+    var cb = this;
+    
+    // Send request
+    $.post('ajax/editable.ajax.php',
+     {
+       'value' : $(this).is(':checked') ? 1 : 0,
+       'table' : $(this).parent().attr('table'),
+       'rowid' : $(this).parent().attr('rowid'),
+       'field' : $(this).parent().attr('field'),
+       'cache' : $(this).parent().attr('cache')
+     },
+     function(data) { 
+      
+                   
+     });
+                      
+    
+  });
 
   $('span.editable').live('click', function() {
     
@@ -412,6 +433,13 @@ function setUpUIControls()
     
     var targetSpan = $(this);
     var target = $(this).parent();
+    
+    
+    if($(this).hasClass('editable_cb'))
+    {
+      // Checkbox mode
+      return;
+    }
     
     $(this).replaceWith('<input item="' + $(this).attr('item') + '" cf="' + $(this).attr('cf') + '" cellid="' + $(this).attr('cellid') + '" cache="' + $(this).attr('cache') + '" id="' + $(this).attr('id') + 
                         '" rowid="' + $(this).attr('rowid') + '" table="' + 

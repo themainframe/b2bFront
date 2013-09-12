@@ -189,10 +189,19 @@ span.editable {
   cursor: url(../image/aui-sheet.cur), default;
 }
 
+span.editable_cb
+{
+ border: none !important;
+ cursor: default !important;
+ padding: 0px;
+ height: auto;
+ background: none !important;
+  left: auto !important;
+}
+
 span.editable:hover {
   border: 1px dotted #000;
   background: #fff;
-  padding: 1px;
   position: relative;
   left: -2px;
 }

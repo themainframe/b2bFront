@@ -578,7 +578,13 @@ class DataColumn extends Configurable
       $output .= '<span id="' . $this->dataTable->get_name() . '_' . $this->dataName . '_' . $resultRow->id .
                  '" table="' . $this->getOption('editableTable') . '" rowid="' . $resultRow->id . 
                  '" field="' . $this->dataName . '" cache="' . $this->getOption('editableCache') . '" empty="' . $this->getOption('editableEmptyAction') . 
-                 '" unselectable="on" class="editable">' . $value . '</span>';
+                 '" unselectable="on" class="editable ' . ($this->getOption('editable_cb') ? 'editable_cb' :'') . '">' . 
+                 
+                 ($this->getOption('editable_cb') ? ('<input type="checkbox" value="1" ' .
+                     ($value ? 'checked="checked"' : '') . 
+                  ' />') : $value)
+                 
+                  . '</span>';
     }
     else
     {
