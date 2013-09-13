@@ -65,7 +65,8 @@ class Login extends RootModel
       {
         $this->parent->go(Tools::getModifiedURL(  
           array('option' => $this->parent->in('f_target_action'),
-                'id' => $this->parent->inInteger('f_target_id'))));
+                'id' => $this->parent->inInteger('f_target_id'),
+                'landing' => 'true')));
       }
       else
       {
