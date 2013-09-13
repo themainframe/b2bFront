@@ -486,7 +486,10 @@ class Data extends API
  
     // Data imports + 1
     $this->parent->stats->increment('com.b2bfront.stats.admins.data-imports', 1);
-     
+  
+    // Update last import time
+    $this->parent->config->set('com.b2bfront.site.last-data-import', time());
+
     return array(
       'noaction' => $noAction,
       'updated' => $updated,
