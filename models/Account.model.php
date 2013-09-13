@@ -24,6 +24,10 @@ class Account extends RootModel
     $this->addValue('title', $this->parent->config->get('com.b2bfront.site.title', true) . 
                     ' - My Account');
     $this->addValue('tab_account', 'selected');
+
+    // Add last update timestamp
+    $this->addValue('last_update',
+      date('F j, Y, g:i a', $this->parent->config->get('com.b2bfront.site.last-data-import', true)));
   
     // Logged in?
     if(!$this->parent->security->loggedIn())
