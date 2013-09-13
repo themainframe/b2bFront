@@ -69,7 +69,7 @@ class Login extends RootModel
       }
       else
       {
-        $this->parent->go(Tools::getModifiedURL(array('option' => 'home')));
+        $this->parent->go(Tools::getModifiedURL(array('option' => 'home', 'landing' => 'true')));
       }
     }
     
